@@ -1,0 +1,951 @@
+* {
+  box-sizing: content-box;
+}
+.header {
+  margin: 0 auto;
+  max-width: 90rem;
+  max-height: 5.625rem;
+  background: #0c0c0e;
+  display: flex;
+  justify-content: space-between;
+}
+.text__header {
+  color: #fff;
+  font-family: Forum-Regular;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.125rem;
+  letter-spacing: 0.6px;
+  margin: 1.25rem 0 1.25rem 1.25rem;
+}
+.nav {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 1.875rem;
+}
+.text__nav {
+  color: #fff;
+  font-family: Inter-Regular;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.125rem;
+  margin: 1.25rem 0 1.25rem 1.25rem;
+  cursor: pointer;
+}
+.text__nav:hover {
+  border-radius: 2px;
+  border: 1px solid #bb945f;
+  background: #bb945f;
+}
+.img {
+  margin: 1.938rem 1.25rem 1.938rem 0px;
+}
+.img:hover {
+  border-radius: 2px;
+  border: 1px solid #bb945f;
+  background: #bb945f;
+}
+.container {
+  margin: 0 auto;
+  max-width: 90rem;
+}
+.img__welcome {
+  width: 100%;
+  height: 37.5rem;
+  position: relative;
+}
+.img1 {
+  background-image: url(../img/welcome.jpg);
+  background-size: cover;
+  background-position: center;
+  max-width: 90rem;
+  height: 37.5rem;
+  position: relative;
+}
+.overlay {
+  width: 90rem;
+  height: 18.75rem;
+  background: linear-gradient(
+    180deg,
+    #0c0c0e 0%,
+    #0c0c0e 0.01%,
+    rgba(18, 18, 21, 0.1) 100%
+  );
+}
+.welcome__bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 37.5rem;
+  height: 13.75rem;
+  padding: 2.1875rem 2.5rem;
+  background-color: black;
+  position: absolute;
+  top: 10rem;
+}
+.welcome__bgtext {
+  text-align: center;
+  font-family: Forum-Regular;
+  max-width: 37.5rem;
+  height: 13.75rem;
+  color: #fff;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.125rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.about {
+  width: 90rem;
+  height: 52.3125rem;
+  background: #fff;
+}
+.about__h2 {
+  margin: 0 auto;
+  font-family: Forum-Regular;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  justify-content: center;
+  color: #0c0c0e;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+  letter-spacing: 0.125rem;
+}
+.about__line {
+  width: 3.125rem;
+  height: 0.0625rem;
+  background: #0c0c0e;
+  margin: 0 auto;
+  margin-bottom: 2.5rem;
+}
+.about__text {
+  color: #000;
+  text-align: center;
+  font-family: Inter-Regular;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+  margin: 0 auto;
+  margin-bottom: 1.25rem;
+}
+.img__about {
+  display: flex;
+  justify-content: space-around;
+}
+.svg {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+.svg1 {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: black;
+  margin: 0 0.5rem 0 0.5rem;
+}
+.svg1:hover {
+  border: 1px solid #bb945f;
+  background: #bb945f;
+  cursor: pointer;
+}
+.favorites {
+  width: 90rem;
+  height: 89.9375rem;
+  padding-bottom: 2.5rem;
+}
+.Favorites__h2 {
+  margin: 0 auto;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  justify-content: center;
+  color: #0c0c0e;
+  font-family: Forum-Regular;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+  letter-spacing: 0.125rem;
+}
+.Favorites__h3 {
+  color: #000;
+  font-family: Inter-Bold;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+.seasons {
+  width: 43.75rem;
+  height: 1.5rem;
+  display: flex;
+}
+.seasons__lable {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.seasons__lable input {
+  display: none;
+}
+.radio-button {
+  width: 1.0625rem;
+  height: 1.0625rem;
+  border: 2px solid #000;
+  border-radius: 50%;
+  margin: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.radio-button::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.seasons__lable input:checked + .radio-button::before {
+  opacity: 1;
+}
+.seasons__lable input:checked + .radio-button + .seasons__text {
+  font-weight: 700;
+}
+.seasons__text {
+  margin: 0 auto;
+  margin-right: 5.62rem;
+  margin-left: 1.25rem;
+  color: #000;
+  font-family: Inter-Regular;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.favorites__items {
+  position: relative;
+  margin-top: 2.5rem;
+}
+.favorites__line {
+  margin: 0;
+  width: 3.75rem;
+  height: 0.0625rem;
+  background: #bb945f;
+  margin-left: 1.25rem;
+  margin-bottom: 0.94rem;
+}
+.Picks {
+  margin: 0;
+  color: #000;
+  font-family: Forum-Regular;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+  letter-spacing: 0.125rem;
+  margin: 0.94rem 1.25rem 0 1.25rem;
+  text-transform: capitalize;
+}
+.favorites__head {
+  margin: 0;
+  color: #000;
+  font-size: 0.9375rem;
+  font-family: Inter-Bold;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.5rem;
+  letter-spacing: 0.125rem;
+  margin-left: 1.25rem;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+}
+.favorites__text {
+  width: 22.1875rem;
+  margin: 0;
+  color: #000;
+  font-family: Inter-Regular;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+  letter-spacing: 0.125rem;
+  margin-left: 1.25rem;
+}
+.first__books {
+  width: 34.375rem;
+  height: 34.6875rem;
+  border: 1px solid #000;
+  background: #fff;
+  position: absolute;
+}
+.favorites__button {
+  color: #0c0c0e;
+  text-align: center;
+  font-family: Inter-Bold;
+  font-size: 0.625rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.0625rem;
+  padding: 0.56rem 1.69rem 0.56rem 1.69rem;
+  margin: 0 0 0.94rem 1.25rem;
+  position: absolute;
+  bottom: 0;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.favorites__button:hover {
+  border-radius: 0.125rem;
+  border: 2px solid #bb945f;
+  border-radius: 5px;
+  color: #bb945f;
+}
+.favorites__button::before {
+  content: "Buy";
+}
+.favorites__button:hover::before {
+  content: "Own";
+}
+.book1 {
+  position: absolute;
+  left: 25rem;
+  bottom: -0.1rem;
+}
+.second__books {
+  width: 34.375rem;
+  height: 34.6875rem;
+  border: 1px solid #000;
+  background: #fff;
+  position: absolute;
+  right: 5rem;
+}
+.book2 {
+  position: absolute;
+  left: 25rem;
+  bottom: -0.1rem;
+}
+.third__books {
+  width: 34.375rem;
+  height: 34.6875rem;
+  border: 1px solid #000;
+  background: #fff;
+  position: absolute;
+  top: 40rem;
+}
+.book3 {
+  position: absolute;
+  left: 25rem;
+  bottom: -0.1rem;
+}
+.fourth__books {
+  width: 34.375rem;
+  height: 34.6875rem;
+  border: 1px solid #000;
+  background: #fff;
+  position: absolute;
+  right: 5rem;
+  top: 40rem;
+}
+.book4 {
+  position: absolute;
+  left: 25rem;
+  bottom: -0.1rem;
+}
+.coffe__shop {
+  display: flex;
+  width: 90rem;
+  padding: 1.25rem 1.25rem 2.5rem 1.25rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+.coffee__h2 {
+  color: #0c0c0e;
+  font-family: Forum-Regular;
+  margin: 0;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+  letter-spacing: 0.125rem;
+  text-transform: capitalize;
+}
+.about__line1 {
+  width: 3.125rem;
+  height: 0.0625rem;
+  background: #0c0c0e;
+  margin: 0 auto;
+}
+.coffee_text {
+  color: #000;
+  text-align: center;
+  font-family: Inter-Regular;
+  margin: 0;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+  letter-spacing: 0.125rem;
+  text-transform: capitalize;
+}
+.menu {
+  width: 87.5rem;
+  height: 32.5rem;
+  position: relative;
+}
+.deserts {
+  display: flex;
+  width: 30.125rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2.5rem;
+  position: absolute;
+  right: 0;
+}
+.coffe__and__tea {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: normal;
+  gap: 2.5rem;
+}
+.coffe__and__tea__h2 {
+  margin: 0;
+  color: #bb945f;
+  font-family: Forum-Regular;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+  letter-spacing: 0.125rem;
+  text-transform: capitalize;
+}
+.menu__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3.75rem;
+}
+.coffe__text1 {
+  margin: 0;
+  color: #000;
+  font-family: Inter-Regular;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+  letter-spacing: 0.125rem;
+  text-transform: capitalize;
+}
+.coffe__line {
+  width: 6.25rem;
+  height: 0.0625rem;
+  background: #bb945f;
+}
+.coffe__line1 {
+  width: 6.25rem;
+  height: 0.0625rem;
+  background: #bb945f;
+  margin-left: 0.5rem;
+}
+.coffe__line2 {
+  width: 6.25rem;
+  height: 0.0625rem;
+  background: #bb945f;
+}
+.coffe__line3 {
+  width: 6.25rem;
+  height: 0.0625rem;
+  background: #bb945f;
+  margin-left: 5.7rem;
+}
+.coffe__line4 {
+  width: 6.25rem;
+  height: 0.0625rem;
+  background: #bb945f;
+  margin-left: 3.8rem;
+}
+.coffe__line5 {
+  width: 6.25rem;
+  height: 0.0625rem;
+  background: #bb945f;
+  margin-left: 6.6rem;
+}
+.coffe__line6 {
+  width: 6.25rem;
+  height: 0.0625rem;
+  background: #bb945f;
+  margin-left: 5.9rem;
+}
+.coffe__money {
+  margin: 0;
+  color: #000;
+  font-family: Forum-Regular;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+  letter-spacing: 0.125rem;
+  text-transform: capitalize;
+}
+.contacts {
+  max-width: 90rem;
+  padding: 1.25rem 1.25rem 2.5rem 1.25rem;
+  background: #fff;
+  position: relative;
+  margin-bottom: 3.75rem;
+}
+.our__contacts {
+  color: #0c0c0e;
+  text-align: center;
+  font-family: Forum-Regular;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+  letter-spacing: 0.125rem;
+  text-transform: capitalize;
+  margin-bottom: 1.25rem;
+}
+.contacts__info {
+  width: 31.4375rem;
+  height: 23.75rem;
+  display: flex;
+  flex-direction: column;
+}
+.contacts__h2 {
+  margin: 0;
+  margin-bottom: 2.5rem;
+  color: #000;
+  font-family: Inter-Regular;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.5rem;
+  letter-spacing: 0.125rem;
+  text-transform: capitalize;
+}
+.phone__info {
+  color: #000;
+  font-family: Inter-Regular;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+  letter-spacing: 0.125rem;
+  text-transform: capitalize;
+}
+.phone__info1 {
+  margin: 0;
+  color: #000;
+  font-family: Inter-Regular;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+  letter-spacing: 0.125rem;
+  text-transform: capitalize;
+}
+.phone__info2 {
+  margin: 0;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  color: #000;
+  font-family: Inter-Regular;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+  letter-spacing: 0.125rem;
+  text-transform: capitalize;
+}
+.phone1 {
+  text-decoration: none;
+}
+.phone1:hover {
+  color: blue;
+}
+a {
+  color: black;
+}
+.senior {
+  width: 21.9375rem;
+  height: 6.25rem;
+  margin-top: 2.5rem;
+}
+.senior__name {
+  margin: 0;
+  color: #000;
+  font-family: Inter-Regular;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.5rem;
+  letter-spacing: 0.125rem;
+  text-transform: capitalize;
+}
+.director {
+  margin: 0;
+  margin-top: 1.25rem;
+  color: #000;
+  text-align: center;
+  font-family: Inter-Regular;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+  letter-spacing: 0.125rem;
+  text-transform: capitalize;
+}
+.director__span:hover {
+  margin: 0;
+  margin-top: 1.25rem;
+  color: #000;
+  text-align: center;
+  font-family: Inter-Regular;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.5rem;
+  letter-spacing: 0.125rem;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.rectangle {
+  width: 43.5rem;
+  height: 25.875rem;
+  display: flex;
+  position: absolute;
+  right: 0;
+  background: url(../img/Rectangle\ 4.png);
+}
+.LibraryCard {
+  width: 90rem;
+  height: 38.375rem;
+  background: #fff;
+  position: relative;
+}
+.section__title {
+  margin: 0 auto;
+  width: 25rem;
+  height: 3.8125rem;
+}
+.LibraryCard__title {
+  margin: 0;
+  margin-bottom: 1.25rem;
+  color: #0c0c0e;
+  text-align: center;
+  font-family: Forum-Regular;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+  letter-spacing: 0.125rem;
+  text-transform: capitalize;
+}
+.cars {
+  width: 90rem;
+  height: 38.375rem;
+  display: flex;
+  justify-content: space-between;
+}
+.find__card {
+  width: 37.5rem;
+  height: 28.3125rem;
+  margin-top: 2.5rem;
+}
+.find__card__text {
+  margin: 0;
+  color: #000;
+  text-align: center;
+  font-family: Inter-Regular;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.0375rem;
+}
+.card__body {
+  display: flex;
+  width: 37.5rem;
+  height: 24.1875rem;
+  padding-bottom: 0.0625rem;
+  justify-content: center;
+  align-items: center;
+}
+.card__bg {
+  width: 37.5rem;
+  height: 24.125rem;
+  position: relative;
+  margin-top: 1.87rem;
+}
+.white__bg {
+  width: 37.5rem;
+  height: 24.125rem;
+  border: 3px solid #bb945f;
+  background: #fff;
+  position: relative;
+}
+.gold__bg {
+  width: 35rem;
+  height: 17rem;
+  background: #bb945f;
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+.gold__bg__text {
+  margin: 0;
+  padding: 1.25rem;
+  color: #000;
+  font-family: Forum-Regular;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.125rem;
+  letter-spacing: 0.0375rem;
+}
+.input {
+  width: 32.5rem;
+  height: 4.125rem;
+  border-radius: 0.625rem;
+  background: #fff;
+  margin-left: 1.25rem;
+  color: #8e8e8e;
+  font-family: Forum-Regular;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.125rem;
+  letter-spacing: 0.0375rem;
+}
+.button__white {
+  padding: 0.625rem 2.5rem;
+  border-radius: 0.125rem;
+  border: 1px solid #0c0c0e;
+  color: #0c0c0e;
+  text-align: center;
+  font-family: Inter-Regular;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.0625rem;
+  position: absolute;
+  bottom: 1.88rem;
+  right: 12.44rem;
+}
+.button__white:hover {
+  border-radius: 0.125rem;
+  border: 1px solid #bb945f;
+  background: #bb945f;
+  cursor: pointer;
+}
+.get__a__card {
+  width: 28.5rem;
+  height: 15.8125rem;
+  position: relative;
+}
+.get__a__card__head {
+  margin: 0;
+  margin-bottom: 2.19rem;
+  color: #000;
+  text-align: end;
+  font-family: Forum-Regular;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.0375rem;
+}
+.get__a__card__text {
+  margin: 0;
+  color: #000;
+  text-align: right;
+  font-family: Inter-Regular;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+  letter-spacing: 0.025rem;
+}
+.get__a__card__button {
+  width: 4.6875rem;
+  height: 1.875rem;
+  padding: 0.625rem 0rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.125rem;
+  border: 1px solid #0c0c0e;
+  color: #0c0c0e;
+  text-align: center;
+  font-family: Inter-Regular;
+  font-size: 0.625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.0625rem;
+  position: absolute;
+  bottom: 0;
+  right: 5.9375rem;
+}
+.get__a__card__button1 {
+  width: 4.6875rem;
+  height: 1.875rem;
+  padding: 0.625rem 0rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.125rem;
+  border: 1px solid #0c0c0e;
+  color: #0c0c0e;
+  text-align: center;
+  font-family: Inter-Regular;
+  font-size: 0.625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.0625rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.get__a__card__button:hover {
+  border-radius: 0.125rem;
+  border: 1px solid #bb945f;
+  background: #bb945f;
+  cursor: pointer;
+}
+.get__a__card__button1:hover {
+  border-radius: 0.125rem;
+  border: 1px solid #bb945f;
+  background: #bb945f;
+  cursor: pointer;
+}
+.footer__head {
+  margin: 0 auto;
+  width: 90rem;
+  height: 15.625rem;
+  background: #0c0c0e;
+}
+.frame {
+  width: 87.5rem;
+  height: 5.625rem;
+}
+.frame1 {
+  width: 87.5rem;
+  height: 2.5rem;
+  position: relative;
+}
+.frame__text {
+  width: 14.3125rem;
+  height: 5rem;
+  color: #fff;
+  font-family: Inter-Regular;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  margin-left: 1.25rem;
+  position: absolute;
+}
+.frame__text1 {
+  width: 14.3125rem;
+  height: 5rem;
+  color: #fff;
+  font-family: Inter-Regular;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  margin-left: 1.25rem;
+  text-align: end;
+  position: absolute;
+  top: -1.25rem;
+  right: 0;
+}
+.frame2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 71.6875rem;
+  margin-top: 0.62rem;
+}
+
+.social__media {
+  display: flex;
+  width: 6.375rem;
+  height: 1.5rem;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.9375rem;
+}
+.twitter {
+  margin-left: 1.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: width 2s, height 2s;
+}
+.instagram {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: width 2s, height 2s;
+}
+.facebook {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: width 2s, height 2s;
+}
+.twitter:hover {
+  width: 2rem;
+  height: 2rem;
+}
+.instagram:hover {
+  width: 2rem;
+  height: 2rem;
+}
+.facebook:hover {
+  width: 2rem;
+  height: 2rem;
+}
+.frame2__text {
+  color: #fff;
+  text-align: right;
+  font-family: Inter-Regular;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+@font-face {
+  font-family: "Forum-Regular";
+  src: url(../fonts/Forum-Regular.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Inter-Bold";
+  src: url(../fonts/Inter-Bold.otf);
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Inter-Regular";
+  src: url(../fonts/Inter-Regular.otf);
+  font-style: normal;
+  font-weight: normal;
+}

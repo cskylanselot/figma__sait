@@ -769,6 +769,7 @@ input[type="number"]::-webkit-outer-spin-button {
   border-radius: 0.125rem;
   border: 1px solid #0c0c0e;
   color: #0c0c0e;
+  background-color: white;
   text-align: center;
   font-family: Inter-Regular;
   font-size: 1.25rem;
@@ -823,6 +824,7 @@ input[type="number"]::-webkit-outer-spin-button {
   border-radius: 0.125rem;
   border: 1px solid #0c0c0e;
   color: #0c0c0e;
+  background-color: white;
   text-align: center;
   font-family: Inter-Regular;
   font-size: 0.625rem;
@@ -842,6 +844,7 @@ input[type="number"]::-webkit-outer-spin-button {
   border-radius: 0.125rem;
   border: 1px solid #0c0c0e;
   color: #0c0c0e;
+  background-color: white;
   text-align: center;
   font-family: Inter-Regular;
   font-size: 0.625rem;

@@ -78,7 +78,7 @@
             <p class="Picks">Staff Picks</p>
             <div class="favorites__line"></div>
             <p class="favorites__head">
-              The Book Eaters <br />By Sunyi Dean <br />
+              THE BOOK EATERS<br />By Sunyi Dean <br />
             </p>
             <p class="favorites__text">
               An unusual sci-fi story about a book eater woman who tries
@@ -94,7 +94,7 @@
             <p class="Picks">Staff Picks</p>
             <div class="favorites__line"></div>
             <p class="favorites__head">
-              Cackle <br />By Rachel Harrison <br />
+              CACKLE <br />By Rachel Harrison <br />
             </p>
             <p class="favorites__text">
               Are your Halloween movies of choice The Witches of Eastwick and
@@ -109,7 +109,7 @@
             <p class="Picks">Staff Picks</p>
             <div class="favorites__line"></div>
             <p class="favorites__head">
-              Dante: Poet of the Secular World <br />By Erich Auerbach <br />
+              DANTE: POET OF THE SECULAR WORLD <br />By Erich Auerbach <br />
             </p>
             <p class="favorites__text">
               Auerbach's engaging book places the 'Comedy' within the tradition
@@ -125,7 +125,7 @@
             <p class="Picks">Staff Picks</p>
             <div class="favorites__line"></div>
             <p class="favorites__head">
-              The Last Queen <br />By Clive Irving <br />
+              THE LAST QUEEN <br />By Clive Irving <br />
             </p>
             <p class="favorites__text">
               A timely and revelatory new biography of Queen Elizabeth (and her
@@ -142,9 +142,9 @@
         <div class="about__line1"></div>
         <p class="coffee_text">
           In our library, we have of cozy coffee shop, welcoming in customers
-          with frothy cappuccinos and friendly conversation. you can get a
+          with frothy cappuccinos and friendly conversation. <br />You can get a
           favorite book and read in coffee shop. Our barista to cook you best
-          coffee, and also you can try desserts from bakery.
+          coffee, and also you can try desserts <br />from bakery.
         </p>
         <div class="menu">
           <div class="deserts">
@@ -246,11 +246,17 @@
               Library Director: <span class="director__span">Amanda Hirst</span>
             </p>
           </div>
-          <a
-            class="rectangle"
-            href="https://g.co/kgs/r3LFuxQ"
-            target="_blank"
-          ></a>
+          <div class="rectangle">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.015977042437!2d-73.99387252400267!3d40.69564577139614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a49b649b8c3%3A0x6342a2291cea2e!2zMjg2IENhZG1hbiBQbHogVywgQnJvb2tseW4sIE5ZIDExMjAxLCDQodCo0JA!5e0!3m2!1sru!2snl!4v1738917900984!5m2!1sru!2snl"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
       </div>
       <div class="LibraryCard">
@@ -269,9 +275,8 @@
                 <div class="gold__bg">
                   <p class="gold__bg__text">Brooklyn Public Library</p>
                   <input
-                    type="name"
-                    name=""
-                    id=""
+                    type="text"
+                    oninput="this.value = this.value.replace(/[^a-zа-яё\s]/gi,'')"
                     placeholder="Reader's name"
                     class="input"
                   />
@@ -321,8 +326,11 @@
               ><img class="facebook" src="img/u_facebook-f.png" alt=""
             /></a>
           </div>
-          <p class="frame2__text"><br />Sat - Sun <br />10:00 am - 06:00 pm</p>
+          <div class="frame2__text">
+            <br />Sat - Sun <br />10:00 am - 06:00 pm
+          </div>
         </div>
+        <div class="line3"></div>
       </div>
     </footer>
   </body>

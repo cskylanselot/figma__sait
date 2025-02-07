@@ -1,6 +1,10 @@
 * {
   box-sizing: content-box;
 }
+body {
+  margin: 0;
+  padding: 0;
+}
 .header {
   margin: 0 auto;
   max-width: 90rem;
@@ -16,7 +20,6 @@
   font-style: normal;
   font-weight: 400;
   line-height: 3.125rem;
-  letter-spacing: 0.6px;
   margin: 1.25rem 0 1.25rem 1.25rem;
 }
 .nav {
@@ -43,7 +46,7 @@
   margin: 1.938rem 1.25rem 1.938rem 0px;
 }
 .img:hover {
-  border-radius: 2px;
+  border-radius: 20px;
   border: 1px solid #bb945f;
   background: #bb945f;
 }
@@ -99,7 +102,7 @@
   text-transform: uppercase;
 }
 .about {
-  width: 90rem;
+  max-width: 90rem;
   height: 52.3125rem;
   background: #fff;
 }
@@ -136,8 +139,12 @@
   margin-bottom: 1.25rem;
 }
 .img__about {
+  width: 87.5rem;
+  height: 35rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 .svg {
   display: flex;
@@ -157,13 +164,12 @@
   cursor: pointer;
 }
 .favorites {
-  width: 90rem;
+  max-width: 90rem;
   height: 89.9375rem;
-  padding-bottom: 2.5rem;
+  padding-bottom: 2.08rem;
 }
 .Favorites__h2 {
   margin: 0 auto;
-  margin-top: 1.25rem;
   margin-bottom: 1.25rem;
   display: flex;
   justify-content: center;
@@ -182,6 +188,7 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  margin-top: 0;
   margin-left: 1.25rem;
   margin-bottom: 2.5rem;
 }
@@ -189,6 +196,7 @@
   width: 43.75rem;
   height: 1.5rem;
   display: flex;
+  margin-left: 1.25rem;
 }
 .seasons__lable {
   display: flex;
@@ -236,8 +244,12 @@
   line-height: normal;
 }
 .favorites__items {
+  max-width: 87.5rem;
+  height: 71.875rem;
   position: relative;
   margin-top: 2.5rem;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
 }
 .favorites__line {
   margin: 0;
@@ -270,7 +282,6 @@
   letter-spacing: 0.125rem;
   margin-left: 1.25rem;
   margin-bottom: 1.25rem;
-  text-transform: uppercase;
 }
 .favorites__text {
   width: 22.1875rem;
@@ -283,6 +294,7 @@
   line-height: 2.5rem;
   letter-spacing: 0.125rem;
   margin-left: 1.25rem;
+  text-transform: capitalize;
 }
 .first__books {
   width: 34.375rem;
@@ -320,7 +332,7 @@
 }
 .book1 {
   position: absolute;
-  left: 25rem;
+  left: 24rem;
   bottom: -0.1rem;
 }
 .second__books {
@@ -329,11 +341,11 @@
   border: 1px solid #000;
   background: #fff;
   position: absolute;
-  right: 5rem;
+  right: 2rem;
 }
 .book2 {
   position: absolute;
-  left: 25rem;
+  left: 24rem;
   bottom: -0.1rem;
 }
 .third__books {
@@ -342,11 +354,11 @@
   border: 1px solid #000;
   background: #fff;
   position: absolute;
-  top: 40rem;
+  top: 37.1rem;
 }
 .book3 {
   position: absolute;
-  left: 25rem;
+  left: 24rem;
   bottom: -0.1rem;
 }
 .fourth__books {
@@ -355,12 +367,12 @@
   border: 1px solid #000;
   background: #fff;
   position: absolute;
-  right: 5rem;
-  top: 40rem;
+  right: 2rem;
+  top: 37.1rem;
 }
 .book4 {
   position: absolute;
-  left: 25rem;
+  left: 24rem;
   bottom: -0.1rem;
 }
 .coffe__shop {
@@ -398,7 +410,7 @@
   font-weight: 400;
   line-height: 2.5rem;
   letter-spacing: 0.125rem;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 .menu {
   width: 87.5rem;
@@ -622,15 +634,14 @@ a {
   line-height: 2.5rem;
   letter-spacing: 0.125rem;
   text-transform: capitalize;
-  cursor: pointer;
+  cursor: default;
 }
 .rectangle {
-  width: 43.5rem;
+  max-width: 43.5rem;
   height: 25.875rem;
   display: flex;
   position: absolute;
   right: 0;
-  background: url(../img/Rectangle\ 4.png);
 }
 .LibraryCard {
   width: 90rem;
@@ -720,6 +731,11 @@ a {
   line-height: 3.125rem;
   letter-spacing: 0.0375rem;
 }
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 .input {
   width: 32.5rem;
   height: 4.125rem;
@@ -787,7 +803,6 @@ a {
 .get__a__card__button {
   width: 4.6875rem;
   height: 1.875rem;
-  padding: 0.625rem 0rem;
   justify-content: center;
   align-items: center;
   border-radius: 0.125rem;
@@ -802,12 +817,11 @@ a {
   letter-spacing: 0.0625rem;
   position: absolute;
   bottom: 0;
-  right: 5.9375rem;
+  right: 6.75rem;
 }
 .get__a__card__button1 {
   width: 4.6875rem;
   height: 1.875rem;
-  padding: 0.625rem 0rem;
   justify-content: center;
   align-items: center;
   border-radius: 0.125rem;
@@ -853,7 +867,6 @@ a {
 }
 .frame__text {
   width: 14.3125rem;
-  height: 5rem;
   color: #fff;
   font-family: Inter-Regular;
   font-size: 0.9375rem;
@@ -865,7 +878,6 @@ a {
 }
 .frame__text1 {
   width: 14.3125rem;
-  height: 5rem;
   color: #fff;
   font-family: Inter-Regular;
   font-size: 0.9375rem;
@@ -876,14 +888,17 @@ a {
   text-align: end;
   position: absolute;
   top: -1.25rem;
-  right: 0;
+  right: -1.25rem;
 }
 .frame2 {
+  width: 87.5rem;
+  height: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 71.6875rem;
   margin-top: 0.62rem;
+  position: relative;
 }
 
 .social__media {
@@ -893,6 +908,9 @@ a {
   justify-content: center;
   align-items: flex-start;
   gap: 0.9375rem;
+  position: absolute;
+  left: 0;
+  top: 1.25rem;
 }
 .twitter {
   margin-left: 1.25rem;
@@ -930,6 +948,16 @@ a {
   font-style: normal;
   font-weight: 400;
   line-height: 1.25rem;
+  position: absolute;
+  right: -1.25rem;
+  top: 0.1rem;
+}
+.line3 {
+  width: 87.5rem;
+  height: 0.0625rem;
+  background: #fff;
+  margin-left: 1.25rem;
+  position: absolute;
 }
 @font-face {
   font-family: "Forum-Regular";

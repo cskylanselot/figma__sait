@@ -23,11 +23,14 @@ body {
   margin: 1.25rem 0 1.25rem 1.25rem;
 }
 .nav {
-  display: inline-flex;
-  align-items: flex-start;
+  max-width: 100%;
+}
+.list__nav {
+  display: flex;
   gap: 1.875rem;
 }
 .text__nav {
+  list-style: none;
   color: #fff;
   font-family: Inter-Regular;
   font-size: 1.25rem;
@@ -41,7 +44,7 @@ body {
   color: #bb945f;
 }
 .img {
-  margin: 1.938rem 1.25rem 1.938rem 0px;
+  margin: 1.938rem 1.25rem 1.938rem 0;
 }
 .img:hover {
   border-radius: 20px;
@@ -66,7 +69,7 @@ body {
   position: relative;
 }
 .overlay {
-  width: 90rem;
+  max-width: 90rem;
   height: 18.75rem;
   background: linear-gradient(
     180deg,
@@ -137,7 +140,7 @@ body {
   margin-bottom: 1.25rem;
 }
 .img__about {
-  width: 87.5rem;
+  max-width: 87.5rem;
   height: 35rem;
   display: flex;
   justify-content: space-between;
@@ -191,7 +194,7 @@ body {
   margin-bottom: 2.5rem;
 }
 .seasons {
-  width: 43.75rem;
+  max-width: 43.75rem;
   height: 1.5rem;
   display: flex;
   margin-left: 1.25rem;
@@ -282,7 +285,7 @@ body {
   margin-bottom: 1.25rem;
 }
 .favorites__text {
-  width: 22.1875rem;
+  max-width: 22.1875rem;
   margin: 0;
   color: #000;
   font-family: Inter-Regular;
@@ -323,12 +326,6 @@ body {
   color: #bb945f;
   cursor: pointer;
 }
-/* .favorites__button::before {
-  content: "Buy";
-}
-.favorites__button:hover::before {
-  content: "Own";
-} */
 .book1 {
   position: absolute;
   left: 24rem;
@@ -376,7 +373,7 @@ body {
 }
 .coffe__shop {
   display: flex;
-  width: 90rem;
+  max-width: 90rem;
   padding: 1.25rem 1.25rem 2.5rem 1.25rem;
   flex-direction: column;
   align-items: center;
@@ -409,10 +406,9 @@ body {
   font-weight: 400;
   line-height: 2.5rem;
   letter-spacing: 0.125rem;
-  /* text-transform: capitalize; */
 }
 .menu {
-  width: 87.5rem;
+  max-width: 87.5rem;
   height: 32.5rem;
   position: relative;
 }
@@ -424,14 +420,17 @@ body {
   align-items: flex-end;
   gap: 2.5rem;
   position: absolute;
-  right: 0;
+  left: 10rem;
 }
 .coffe__and__tea {
   display: inline-flex;
+  max-width: 30.125rem;
   flex-direction: column;
   justify-content: center;
   align-items: normal;
   gap: 2.5rem;
+  position: absolute;
+  right: 15rem;
 }
 .coffe__and__tea__h2 {
   margin: 0;
@@ -644,7 +643,7 @@ a {
   right: 0;
 }
 .LibraryCard {
-  width: 90rem;
+  max-width: 90rem;
   height: 38.375rem;
   background: #fff;
   position: relative;
@@ -667,14 +666,14 @@ a {
   letter-spacing: 0.125rem;
   text-transform: capitalize;
 }
-.cars {
-  width: 90rem;
+.cards {
+  max-width: 90rem;
   height: 38.375rem;
   display: flex;
   justify-content: space-between;
 }
 .find__card {
-  width: 37.5rem;
+  max-width: 37.5rem;
   height: 28.3125rem;
   margin-top: 2.5rem;
 }
@@ -691,7 +690,7 @@ a {
 }
 .card__body {
   display: flex;
-  width: 37.5rem;
+  max-width: 37.5rem;
   height: 24.1875rem;
   padding-bottom: 0.0625rem;
   justify-content: center;
@@ -704,7 +703,7 @@ a {
   margin-top: 1.87rem;
 }
 .white__bg {
-  width: 37.5rem;
+  max-width: 37.5rem;
   height: 24.125rem;
   border: 3px solid #bb945f;
   background: #fff;
@@ -789,7 +788,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .get__a__card {
   margin-top: 2.5rem;
-  width: 28.5rem;
+  max-width: 28.5rem;
   height: 15.8125rem;
   position: relative;
 }
@@ -870,21 +869,21 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .footer__head {
   margin: 0 auto;
-  width: 90rem;
+  max-width: 90rem;
   height: 15.625rem;
   background: #0c0c0e;
 }
 .frame {
-  width: 87.5rem;
+  max-width: 87.5rem;
   height: 5.625rem;
 }
 .frame1 {
-  width: 87.5rem;
+  max-width: 87.5rem;
   height: 2.5rem;
   position: relative;
 }
 .frame__text {
-  width: 14.3125rem;
+  max-width: 14.3125rem;
   color: #fff;
   font-family: Inter-Regular;
   font-size: 0.9375rem;
@@ -895,7 +894,7 @@ input[type="number"]::-webkit-outer-spin-button {
   position: absolute;
 }
 .frame__text1 {
-  width: 14.3125rem;
+  max-width: 14.3125rem;
   color: #fff;
   font-family: Inter-Regular;
   font-size: 0.9375rem;
@@ -906,10 +905,10 @@ input[type="number"]::-webkit-outer-spin-button {
   text-align: end;
   position: absolute;
   top: -1.25rem;
-  right: -1.25rem;
+  right: 0;
 }
 .frame2 {
-  width: 87.5rem;
+  max-width: 87.5rem;
   height: 6rem;
   display: flex;
   justify-content: center;
@@ -921,7 +920,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .social__media {
   display: flex;
-  width: 6.375rem;
+  max-width: 6.375rem;
   height: 1.5rem;
   justify-content: center;
   align-items: flex-start;
@@ -932,12 +931,12 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .twitter {
   margin-left: 1.25rem;
-  width: 1.5rem;
+  max-width: 1.5rem;
   height: 1.5rem;
   transition: with, 1s ease;
 }
 .instagram {
-  width: 1.5rem;
+  max-width: 1.5rem;
   height: 1.5rem;
   transition: with, 1s ease;
 }
@@ -967,15 +966,14 @@ input[type="number"]::-webkit-outer-spin-button {
   font-weight: 400;
   line-height: 1.25rem;
   position: absolute;
-  right: -1.25rem;
+  right: 0;
   top: 0.1rem;
 }
 .line3 {
-  width: 87.5rem;
+  max-width: 87.5rem;
   height: 0.0625rem;
   background: #fff;
   margin-left: 1.25rem;
-  position: absolute;
 }
 @font-face {
   font-family: "Forum-Regular";

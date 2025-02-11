@@ -1,0 +1,318 @@
+@media screen and (max-width: 100rem) {
+  .body {
+    max-width: 90rem;
+  }
+  .img {
+    max-width: 90rem;
+  }
+  .container {
+    max-width: 90rem;
+  }
+  .img1 {
+    width: 100vw;
+  }
+}
+@media screen and (max-width: 90rem) {
+  .body {
+    max-width: 90rem;
+  }
+  .header {
+    max-width: 90rem;
+  }
+  .text__header {
+    white-space: nowrap;
+  }
+  .text__nav {
+    white-space: nowrap;
+  }
+  .png3 {
+    display: none;
+  }
+  .img__about {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+@media screen and (max-width: 80rem) {
+  .img {
+    display: none;
+  }
+  .frame__text1 {
+    right: 10rem;
+  }
+  .frame2__text {
+    right: 10rem;
+  }
+  .coffe__shop {
+    width: 48rem;
+    height: 92.5625rem;
+    background: #fff;
+    position: relative;
+  }
+  .coffee_text {
+    max-width: 45.5rem;
+    margin-right: 2rem;
+  }
+  .menu {
+    max-width: 27.375rem;
+    height: 32.5rem;
+    display: flex;
+  }
+  .deserts {
+    max-width: 30.125rem;
+    position: absolute;
+    left: -10rem;
+    top: 35rem;
+  }
+  .coffe__and__tea {
+    position: absolute;
+    right: -3rem;
+  }
+}
+@media screen and (max-width: 75rem) {
+  .favorites {
+    width: 48rem;
+    height: 150rem;
+    background: #fff;
+  }
+  .favorites__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+  }
+  .first__books {
+    max-width: 34.375rem;
+    max-height: 34.6875rem;
+    position: static;
+    justify-content: center;
+    align-self: center;
+    position: static;
+    position: relative;
+  }
+  .book1 {
+    position: absolute;
+  }
+  .second__books {
+    max-width: 34.375rem;
+    max-height: 34.6875rem;
+    position: static;
+    justify-content: center;
+    align-self: center;
+    position: static;
+    position: relative;
+    margin-left: 4rem;
+  }
+  .book2 {
+    position: absolute;
+  }
+  .third__books {
+    max-width: 34.375rem;
+    max-height: 34.6875rem;
+    position: static;
+    justify-content: center;
+    align-self: center;
+    position: static;
+    position: relative;
+    top: 0;
+  }
+  .book3 {
+    position: absolute;
+  }
+  .fourth__books {
+    max-width: 34.375rem;
+    max-height: 34.6875rem;
+    position: static;
+    justify-content: center;
+    align-self: center;
+    position: static;
+    position: relative;
+    top: 0;
+    margin-left: 4rem;
+  }
+  .book4 {
+    position: absolute;
+  }
+  .favorites__button {
+    position: static;
+    width: 4.6875rem;
+    height: 1.875rem;
+    border-radius: 0.125rem;
+    border: 1px solid #0c0c0e;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contacts__info {
+    white-space: unset;
+  }
+  .frame__text1 {
+    right: 15rem;
+  }
+  .frame2__text {
+    right: 15rem;
+  }
+}
+@media screen and (max-width: 64rem) {
+  .header {
+    margin: 0 auto;
+    width: 100%;
+  }
+  .nav {
+    display: flex;
+    flex-direction: column;
+    z-index: 50;
+    overflow-y: auto;
+    background-color: black;
+  }
+  .text__nav {
+    cursor: pointer;
+    display: none;
+  }
+  .img {
+    display: flex;
+    position: absolute;
+    right: 3rem;
+    top: 0;
+  }
+  .burger {
+    width: 2.8125rem;
+    height: 1.25rem;
+    display: flex;
+    position: relative;
+    z-index: 50;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .burger__span {
+    width: 2.8125rem;
+    height: 0.125rem;
+    background: #fff;
+    position: absolute;
+  }
+  .burger::before,
+  .burger::after {
+    content: "";
+    position: absolute;
+    width: 2.8125rem;
+    height: 0.125rem;
+    background: #fff;
+  }
+  .burger::before {
+    top: 0;
+  }
+  .burger::after {
+    bottom: 0;
+  }
+  .list__nav {
+    display: flex;
+  }
+  .burger:hover {
+  }
+  .contacts {
+    display: flex;
+    width: 47.9375rem;
+    height: 57.5rem;
+    padding: 1.25rem 1.25rem 2.5rem 1.25rem;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  .contacts__info {
+    white-space: nowrap;
+  }
+  .rectangle {
+    width: 43.5rem;
+    height: 25.875rem;
+    position: static;
+  }
+  .frame__text1 {
+    right: 27rem;
+  }
+  .frame2__text {
+    right: 27rem;
+  }
+  .LibraryCard {
+    max-width: 48rem;
+    max-height: 53.5625rem;
+  }
+  .cards {
+    display: flex;
+    flex-direction: column;
+  }
+  .find__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+  }
+  .get__a__card {
+    max-width: 37.5rem;
+    height: 13.9375rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    position: relative;
+  }
+  .get__a__card__head {
+    text-align: center;
+  }
+  .get__a__card__text {
+    text-align: center;
+  }
+  .get__a__card__button {
+    position: absolute;
+    bottom: -3rem;
+    left: 5rem;
+  }
+  .get__a__card__button1 {
+    position: absolute;
+    bottom: -3rem;
+    right: 5rem;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .header {
+    margin: 0 auto;
+  }
+  .img__about {
+    display: flex;
+    justify-content: center;
+  }
+  .png1 {
+  }
+  .png2 {
+    display: none;
+  }
+  .png3 {
+    display: none;
+  }
+  .footer__head {
+    margin: 0;
+    max-width: 48rem;
+    height: 15.625rem;
+    margin-top: 15rem;
+  }
+  .frame {
+    max-width: 45.5rem;
+  }
+  .frame1 {
+    max-width: 45.5rem;
+  }
+  .frame2 {
+    max-width: 45.5rem;
+  }
+  .line3 {
+    max-width: 45.5rem;
+  }
+  .frame__text {
+  }
+  .frame__text1 {
+    right: -1.25rem;
+  }
+  .frame2__text {
+    right: -1.25rem;
+  }
+}

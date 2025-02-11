@@ -5,18 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
     <title>figma sait</title>
   </head>
   <body>
     <header class="header">
       <p class="text__header">Brooklyn Public Library</p>
       <nav class="nav">
-        <p class="text__nav">About</p>
-        <p class="text__nav">Favorites</p>
-        <p class="text__nav">Coffee shop</p>
-        <p class="text__nav">Contacts</p>
-        <p class="text__nav">Library Card</p>
-        <img class="img" src="img/icon_profile.svg" alt="" />
+        <ul class="list__nav">
+          <li class="text__nav">About</li>
+          <li class="text__nav">Favorites</li>
+          <li class="text__nav">Coffee shop</li>
+          <li class="text__nav">Contacts</li>
+          <li class="text__nav">Library Card</li>
+          <img class="img" src="img/icon_profile.svg" alt="" />
+        </ul>
+        <div class="burger">
+          <span class="burger__span"></span>
+        </div>
       </nav>
     </header>
     <main class="container">
@@ -37,9 +43,9 @@
           a cozy coffee shop inside
         </p>
         <div class="img__about">
-          <img src="img/image 1.png" alt="" />
-          <img src="img/image 2.png" alt="" />
-          <img src="img/image 3.png" alt="" />
+          <img class="png1" src="img/image 1.png" alt="" />
+          <img class="png2" src="img/image 2.png" alt="" />
+          <img class="png3" src="img/image 3.png" alt="" />
         </div>
         <div class="svg">
           <div class="svg1"></div>
@@ -269,7 +275,7 @@
           <div class="LibraryCard__title">Digital Library Cards</div>
           <div class="about__line"></div>
         </div>
-        <div class="cars">
+        <div class="cards">
           <div class="find__card">
             <p class="find__card__text">Find your Library card</p>
             <div class="card__body">

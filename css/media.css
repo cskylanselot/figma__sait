@@ -1,3 +1,11 @@
+/* ::-webkit-scrollbar {
+  width: 0;
+} */
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 @media screen and (max-width: 100rem) {
   .body {
     max-width: 90rem;
@@ -38,12 +46,6 @@
   .img {
     display: none;
   }
-  .frame__text1 {
-    right: 10rem;
-  }
-  .frame2__text {
-    right: 10rem;
-  }
   .coffe__shop {
     width: 48rem;
     height: 92.5625rem;
@@ -77,14 +79,16 @@
     background: #fff;
   }
   .favorites__items {
+    max-width: 87.5rem;
+    height: 71.875rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2.5rem;
   }
   .first__books {
-    max-width: 34.375rem;
-    max-height: 34.6875rem;
+    width: 34.375rem;
+    height: 34.6875rem;
     position: static;
     justify-content: center;
     align-self: center;
@@ -95,8 +99,8 @@
     position: absolute;
   }
   .second__books {
-    max-width: 34.375rem;
-    max-height: 34.6875rem;
+    width: 34.375rem;
+    height: 34.6875rem;
     position: static;
     justify-content: center;
     align-self: center;
@@ -108,8 +112,8 @@
     position: absolute;
   }
   .third__books {
-    max-width: 34.375rem;
-    max-height: 34.6875rem;
+    width: 34.375rem;
+    height: 34.6875rem;
     position: static;
     justify-content: center;
     align-self: center;
@@ -121,8 +125,8 @@
     position: absolute;
   }
   .fourth__books {
-    max-width: 34.375rem;
-    max-height: 34.6875rem;
+    width: 34.375rem;
+    height: 34.6875rem;
     position: static;
     justify-content: center;
     align-self: center;
@@ -148,12 +152,6 @@
   .contacts__info {
     white-space: unset;
   }
-  .frame__text1 {
-    right: 15rem;
-  }
-  .frame2__text {
-    right: 15rem;
-  }
 }
 @media screen and (max-width: 64rem) {
   .header {
@@ -174,7 +172,7 @@
   .img {
     display: flex;
     position: absolute;
-    right: 3rem;
+    right: 5rem;
     top: 0;
   }
   .burger {
@@ -185,6 +183,7 @@
     z-index: 50;
     align-items: center;
     justify-content: flex-end;
+    margin-right: 1.25rem;
   }
   .burger__span {
     width: 2.8125rem;
@@ -209,15 +208,12 @@
   .list__nav {
     display: flex;
   }
-  .burger:hover {
-  }
   .contacts {
     display: flex;
     width: 47.9375rem;
     height: 57.5rem;
     padding: 1.25rem 1.25rem 2.5rem 1.25rem;
     flex-direction: column;
-    gap: 2.5rem;
   }
   .contacts__info {
     white-space: nowrap;
@@ -226,12 +222,9 @@
     width: 43.5rem;
     height: 25.875rem;
     position: static;
-  }
-  .frame__text1 {
-    right: 27rem;
-  }
-  .frame2__text {
-    right: 27rem;
+    margin-top: 6.5rem;
+    display: flex;
+    justify-content: center;
   }
   .LibraryCard {
     max-width: 48rem;
@@ -265,28 +258,17 @@
   .get__a__card__button {
     position: absolute;
     bottom: -3rem;
-    left: 5rem;
+    left: 12.5rem;
   }
   .get__a__card__button1 {
     position: absolute;
     bottom: -3rem;
-    right: 5rem;
-  }
-}
-@media screen and (max-width: 48rem) {
-  .header {
-    margin: 0 auto;
+    right: 12.5rem;
   }
   .img__about {
-    display: flex;
-    justify-content: center;
-  }
-  .png1 {
+    gap: 3.62rem;
   }
   .png2 {
-    display: none;
-  }
-  .png3 {
     display: none;
   }
   .footer__head {
@@ -294,6 +276,34 @@
     max-width: 48rem;
     height: 15.625rem;
     margin-top: 15rem;
+  }
+  .svg2 {
+    display: flex;
+  }
+  .carret__left {
+    display: flex;
+  }
+  .carret_right {
+    display: flex;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .header {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  .welcome__bg {
+    padding-right: 4rem;
+  }
+  .img__about {
+    display: flex;
+    justify-content: center;
+  }
+  .png3 {
+    display: none;
+  }
+  .favorites__button {
+    position: static;
   }
   .frame {
     max-width: 45.5rem;
@@ -306,8 +316,6 @@
   }
   .line3 {
     max-width: 45.5rem;
-  }
-  .frame__text {
   }
   .frame__text1 {
     right: -1.25rem;

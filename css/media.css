@@ -1,6 +1,3 @@
-/* ::-webkit-scrollbar {
-  width: 0;
-} */
 body {
   width: 100%;
   max-width: 100%;
@@ -43,18 +40,24 @@ body {
   }
 }
 @media screen and (max-width: 80rem) {
-  .img {
-    display: none;
+  .list__nav {
+    gap: 1rem;
   }
   .coffe__shop {
     width: 48rem;
     height: 92.5625rem;
     background: #fff;
     position: relative;
+    gap: 0;
+  }
+  .about__line1 {
+    margin-top: 1.25rem;
+    margin-bottom: 2.5rem;
   }
   .coffee_text {
-    max-width: 45.5rem;
-    margin-right: 2rem;
+    width: 45.5rem;
+    margin-bottom: 2.5rem;
+    font-size: 1.24rem;
   }
   .menu {
     max-width: 27.375rem;
@@ -74,8 +77,9 @@ body {
 }
 @media screen and (max-width: 75rem) {
   .favorites {
-    width: 48rem;
-    height: 150rem;
+    margin: 0 auto;
+    max-width: 48rem;
+    height: 164.3125rem;
     background: #fff;
   }
   .favorites__items {
@@ -151,6 +155,9 @@ body {
   }
   .contacts__info {
     white-space: unset;
+  }
+  .coffe__shop {
+    margin: 0 auto;
   }
 }
 @media screen and (max-width: 64rem) {
@@ -257,12 +264,12 @@ body {
   }
   .get__a__card__button {
     position: absolute;
-    bottom: -3rem;
+    bottom: -5rem;
     left: 12.5rem;
   }
   .get__a__card__button1 {
     position: absolute;
-    bottom: -3rem;
+    bottom: -5rem;
     right: 12.5rem;
   }
   .img__about {
@@ -273,9 +280,15 @@ body {
   }
   .footer__head {
     margin: 0;
-    max-width: 48rem;
+    max-width: 64rem;
     height: 15.625rem;
     margin-top: 15rem;
+  }
+  .frame__text1 {
+    right: 0;
+  }
+  .frame2__text {
+    right: 0;
   }
   .svg2 {
     display: flex;
@@ -318,9 +331,9 @@ body {
     max-width: 45.5rem;
   }
   .frame__text1 {
-    right: -1.25rem;
+    right: 0;
   }
   .frame2__text {
-    right: -1.25rem;
+    right: 0;
   }
 }

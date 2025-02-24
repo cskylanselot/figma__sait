@@ -158,7 +158,7 @@ body {
     flex-direction: column;
     z-index: 50;
     overflow-y: auto;
-    background-color: black;
+    background-color: #0c0c0e;
   }
   .text__nav {
     cursor: pointer;
@@ -179,12 +179,12 @@ body {
     align-items: center;
     justify-content: flex-end;
     margin-right: 1.25rem;
+    transition: 0.5 sec;
   }
-  .burger__span {
+  .burger span {
     width: 2.8125rem;
     height: 0.125rem;
     background: #fff;
-    position: absolute;
   }
   .burger::before,
   .burger::after {
@@ -199,6 +199,17 @@ body {
   }
   .burger::after {
     bottom: 0;
+  }
+  .burger.active span {
+    transform: rotate(45deg) translate(0, 50%);
+  }
+  .burger.active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+  }
+  .burger.active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
   }
   .list__nav {
     display: flex;

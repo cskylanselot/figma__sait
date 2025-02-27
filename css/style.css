@@ -329,6 +329,25 @@ body {
   margin-left: 1.25rem;
   margin-right: 1.25rem;
 }
+.partZero {
+  opacity: 1;
+  transition: 0.5s;
+}
+.partOne {
+  display: none;
+  opacity: 0;
+  transition: 0.5s;
+}
+.partToo {
+  display: none;
+  opacity: 0;
+  transition: 0.5s;
+}
+.partThree {
+  display: none;
+  opacity: 0;
+  transition: 0.5s;
+}
 .favorites__line {
   margin: 0;
   width: 3.75rem;

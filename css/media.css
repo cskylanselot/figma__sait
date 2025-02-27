@@ -98,6 +98,22 @@ body {
     flex-direction: column;
     align-items: center;
   }
+  .partZero {
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .partOne {
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .partToo {
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .partThree {
+    opacity: 0;
+    transition: 0.5s;
+  }
   .first__books {
     width: 34.375rem;
     max-height: 34.6875rem;
@@ -170,7 +186,7 @@ body {
     right: 5rem;
     top: 0;
   }
-  .burger {
+  .burger__menu {
     width: 2.8125rem;
     height: 1.25rem;
     display: flex;
@@ -179,35 +195,39 @@ body {
     align-items: center;
     justify-content: flex-end;
     margin-right: 1.25rem;
-    transition: 0.5 sec;
+    cursor: pointer;
   }
-  .burger span {
+  .burger__menu span {
     width: 2.8125rem;
     height: 0.125rem;
     background: #fff;
+    opacity: 1;
+    transition: 1s;
   }
-  .burger::before,
-  .burger::after {
+  .burger__menu::before,
+  .burger__menu::after {
     content: "";
     position: absolute;
     width: 2.8125rem;
     height: 0.125rem;
     background: #fff;
   }
-  .burger::before {
+  .burger__menu::before {
     top: 0;
+    transition: 0.5s;
   }
-  .burger::after {
+  .burger__menu::after {
     bottom: 0;
+    transition: 0.5s;
   }
-  .burger.active span {
-    transform: rotate(45deg) translate(0, 50%);
+  .burger__menu.active span {
+    display: none;
   }
-  .burger.active::before {
+  .burger__menu.active::before {
     top: 50%;
     transform: rotate(-45deg) translate(0, -50%);
   }
-  .burger.active::after {
+  .burger__menu.active::after {
     bottom: 50%;
     transform: rotate(45deg) translate(0, 50%);
   }

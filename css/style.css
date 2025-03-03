@@ -154,6 +154,7 @@ body {
   max-width: 90rem;
   height: 52.3125rem;
   background: #fff;
+  position: relative;
 }
 .about__h2 {
   margin: 0 auto;
@@ -191,22 +192,42 @@ body {
   max-width: 87.5rem;
   height: 35rem;
   display: flex;
-  justify-content: space-between;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
+  overflow: hidden;
+}
+
+.slider {
+  max-width: 87.5rem;
+  height: 35rem;
+  display: flex;
+  gap: 2rem;
+  position: relative;
+  left: 0;
+  transition: all ease 1s;
+}
+
+.png1 {
+  transition: 0.5s;
+}
+.png2 {
+  transition: 0.5s;
+}
+.png3 {
+  transition: 0.5s;
 }
 .png4 {
-  display: none;
+  transition: 0.5s;
 }
 .png5 {
-  display: none;
+  transition: 0.5s;
 }
 .carret__left {
   display: flex;
   align-self: center;
   display: none;
 }
-.carret_right {
+.carret__right {
   display: flex;
   align-self: center;
   display: none;
@@ -222,6 +243,7 @@ body {
   border-radius: 50%;
   background-color: black;
   margin: 0 0.5rem 0 0.5rem;
+  cursor: pointer;
 }
 .svg2 {
   width: 1rem;
@@ -230,13 +252,11 @@ body {
   background-color: black;
   margin: 0 0.5rem 0 0.5rem;
   display: none;
-}
-.svg1:hover {
-  border: 1px solid #bb945f;
-  background: #bb945f;
   cursor: pointer;
 }
-.svg2:hover {
+.active {
+}
+.active1 {
   border: 1px solid #bb945f;
   background: #bb945f;
   cursor: pointer;

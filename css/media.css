@@ -30,14 +30,25 @@ body {
   .text__nav {
     white-space: nowrap;
   }
-  .png3 {
-    display: none;
+  .svgFour {
+    display: flex;
   }
   .img__about {
+    margin: 0 auto;
+    max-width: 60rem;
     display: flex;
     justify-content: center;
+    overflow: hidden;
     gap: 2rem;
+    
   }
+  .slider {
+    max-width: 60rem;
+    height: 35rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: start;
+    margin-left: 1.5rem;
 }
 @media screen and (max-width: 80rem) {
   .list__nav {
@@ -99,7 +110,7 @@ body {
     align-items: center;
   }
   .partZero {
-    opacity: 0;
+    opacity: 1;
     transition: 0.5s;
   }
   .partOne {
@@ -297,10 +308,9 @@ body {
     right: 12.5rem;
   }
   .img__about {
+    max-width: 28.125rem;
+    height: 35rem;
     gap: 3.62rem;
-  }
-  .png2 {
-    display: none;
   }
   .footer__head {
     margin: 0;
@@ -319,10 +329,26 @@ body {
   }
   .carret__left {
     display: flex;
+    align-self: center;
+    position: absolute;
+    cursor: pointer;
+    top: 27rem;
+    left: 9rem;
   }
-  .carret_right {
+  .carret__right {
     display: flex;
+    align-self: center;
+    position: absolute;
+    cursor: pointer;
+    top: 27rem;
+    right: 9rem;
   }
+  .slider {
+    max-width: 28.125rem;
+    height: 35rem;
+    display: flex;
+    justify-content: start;
+    gap: 2rem;
 }
 @media screen and (max-width: 48rem) {
   .header {
@@ -335,9 +361,6 @@ body {
   .img__about {
     display: flex;
     justify-content: center;
-  }
-  .png3 {
-    display: none;
   }
   .about__text {
     margin-left: 1.25rem;

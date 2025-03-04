@@ -85,20 +85,261 @@ body {
   margin: 1.25rem 0 1.25rem 1.25rem;
   cursor: pointer;
   margin: 0;
+  text-decoration: none;
 }
 /* Здесь заканчивается бургер меню */
 
 .text__nav:hover {
   color: #bb945f;
 }
-.img {
+/* Здесь начинается LogIn меню */
+.imgLogMenu {
   margin: 1.938rem 1.25rem 1.938rem 0;
+  cursor: pointer;
+  z-index: 11;
 }
-.img:hover {
+.imgLogMenu:hover {
   border-radius: 20px;
   border: 1px solid #bb945f;
   background: #bb945f;
 }
+.dropMenu {
+  text-align: center;
+  width: 5rem;
+  background: #fff;
+}
+.LogIn {
+  position: absolute;
+  z-index: 90;
+  right: 5rem;
+  top: -9rem;
+  transition: 0.5s;
+}
+.LogOut {
+  display: none;
+  position: absolute;
+  top: 5rem;
+  right: 5rem;
+}
+.Profile {
+  color: #000;
+  font-family: Inter-Regular;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.25rem;
+}
+.line4 {
+  margin: 0 auto;
+  width: 2.5rem;
+  height: 0.0625rem;
+  background: #bb945f;
+}
+.dropMenu__text {
+  color: #000;
+  text-align: center;
+  font-family: Inter-Regular;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  cursor: pointer;
+}
+/* Здесь заканчивается LogIn меню */
+
+.modal__Login {
+  width: 15.625rem;
+  height: 16.375rem;
+  background-color: white;
+  position: absolute;
+  top: -20rem;
+  right: 17rem;
+  transition: 0.5s;
+}
+.krestik {
+  position: absolute;
+  top: 0.94rem;
+  right: 0.94rem;
+  cursor: pointer;
+}
+.krestikk {
+  position: absolute;
+  top: 0.94rem;
+  right: 0.94rem;
+  cursor: pointer;
+}
+.LogInMenuOpen {
+  margin: 0;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  justify-content: center;
+  color: #000;
+  text-align: center;
+  font-family: Forum-Regular;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+}
+.modal__text {
+  margin: 0;
+  margin-top: 0.62rem;
+  margin-bottom: 0.62rem;
+  margin-left: 1.56rem;
+  color: #000;
+  font-family: Inter-Regular;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  letter-spacing: 0.01875rem;
+}
+input {
+  width: 12.5rem;
+  height: 1.25rem;
+  margin-left: 1.56rem;
+  border: 1px solid #bb945f;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  background: #0a377e;
+  margin: 0;
+}
+.modal__text__button {
+  margin-top: 1.25rem;
+  margin-left: 1.56rem;
+  margin-bottom: 0.62rem;
+  width: 4.6875rem;
+  height: 1.875rem;
+  border-radius: 0.125rem;
+  border: 1px solid #0c0c0e;
+  cursor: pointer;
+}
+.modal__button__text {
+  margin: 0;
+  color: #0c0c0e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Inter-Regular;
+  font-size: 0.625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.0625rem;
+}
+.register__menu {
+  display: flex;
+  margin-left: 0.5rem;
+}
+.modal__text__mini {
+  margin: 0;
+  color: #000;
+  text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+  font-family: Inter-Regular;
+  font-size: 0.625rem;
+  font-weight: 400;
+}
+.register {
+  margin-left: 0.5rem;
+  color: #0c0c0e;
+  font-family: Inter-Regular;
+  font-size: 0.625rem;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.0625rem;
+}
+.modal__Register {
+  width: 15.625rem;
+  height: 23.875rem;
+  background-color: white;
+  position: absolute;
+  top: -25rem;
+  right: 1rem;
+  transition: 0.5s;
+}
+.modal__buy__a__card {
+  margin: 0 auto;
+  margin-top: 2rem;
+  width: 40.625rem;
+  height: 33.75rem;
+  position: relative;
+  border: 1px solid red;
+}
+.krestik1 {
+  position: absolute;
+  top: 1.56rem;
+  right: 1.56rem;
+}
+.modal__header {
+  width: 40.625rem;
+  height: 3.75rem;
+  background: #0c0c0e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buy__a__card {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.modal__main {
+  display: flex;
+  justify-content: space-around;
+}
+.modal__buy1 {
+  margin-top: 1.87rem;
+}
+.Expiration__code {
+  display: flex;
+}
+.number__mini input {
+  width: 2.8125rem;
+  height: 1.25rem;
+}
+.Expiration__code {
+  display: flex;
+}
+.buy__a__card__menu {
+  display: flex;
+}
+.price {
+  margin: 0;
+  color: #0c0c0e;
+  font-family: Inter-Regular;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.25rem;
+  letter-spacing: 0.125rem;
+  margin-left: 1.56rem;
+  margin-top: 1.88rem;
+}
+.modal__buy2 {
+  margin-top: 1.87rem;
+  margin-right: 2.5rem;
+  width: 20.625rem;
+}
+.modal__text1 {
+  margin: 0;
+  color: #000;
+  font-family: Inter-Regular;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  letter-spacing: 0.125rem;
+}
+
+/*Здесь начинаются инпут меню логин, регистр бай а лайбрари кард и т.д.  */
 .container {
   margin: 0 auto;
   max-width: 90rem;

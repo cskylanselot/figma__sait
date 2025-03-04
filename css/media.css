@@ -7,7 +7,7 @@ body {
   .body {
     max-width: 90rem;
   }
-  .img {
+  .imgLogMenu {
     max-width: 90rem;
   }
   .container {
@@ -191,7 +191,7 @@ body {
     cursor: pointer;
     display: none;
   }
-  .img {
+  .imgLogMenu {
     display: flex;
     position: absolute;
     right: 5rem;
@@ -268,7 +268,7 @@ body {
   }
   .LibraryCard {
     margin: 0 auto;
-    margin-top: 5rem;
+    margin-top: 10rem;
     max-width: 48rem;
     max-height: 53.5625rem;
   }

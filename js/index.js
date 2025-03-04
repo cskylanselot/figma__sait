@@ -1,12 +1,33 @@
+// Функция для открытия бургер меню
+
 const active = document.querySelector(".burger__menu");
 
 const element = document.getElementById("elementBody");
 
 const navOpen = document.getElementById("burger__id");
 
-// Функция для открытия бургер меню
-active.addEventListener("click", function () {
+// active.addEventListener("click", function () {
+//   active.classList.toggle("active");
+//   if (imgLog.classList.contains("LogInActive")) {
+//     imgLog.classList.remove("LogInActive");
+//     LogInOpen.style.top = "-9rem";
+//   }
+//   if (active.classList.contains("active")) {
+//     navOpen.style.top = "5.625rem";
+//     element.style.overflowY = "hidden";
+//   } else {
+//     navOpen.style.top = "-30rem";
+//     element.style.overflowY = "visible";
+//   }
+// });
+
+active.addEventListener("click", burgerMenu);
+function burgerMenu() {
   active.classList.toggle("active");
+  if (imgLog.classList.contains("LogInActive")) {
+    imgLog.classList.remove("LogInActive");
+    LogInOpen.style.top = "-9rem";
+  }
   if (active.classList.contains("active")) {
     navOpen.style.top = "5.625rem";
     element.style.overflowY = "hidden";
@@ -14,8 +35,68 @@ active.addEventListener("click", function () {
     navOpen.style.top = "-30rem";
     element.style.overflowY = "visible";
   }
-});
+}
 //
+
+// LogIn menu
+const LogInOpen = document.querySelector(".LogIn");
+
+const imgLog = document.querySelector(".imgLogMenu");
+
+imgLog.addEventListener("click", function () {
+  imgLog.classList.toggle("LogInActive");
+  if (active.classList.contains("active")) {
+    active.classList.remove("active");
+    navOpen.style.top = "-30rem";
+  }
+  if (imgLog.classList.contains("LogInActive")) {
+    LogInOpen.style.top = "5rem";
+  } else {
+    LogInOpen.style.top = "-9rem";
+  }
+});
+// Конец LogIn menu
+
+// Log menu и Register menu
+
+const LogInClick = document.querySelector(".LogInClick");
+const modalLogin = document.querySelector(".modal__Login");
+const RegisterClick = document.querySelector(".RegisterClick");
+const modalRegister = document.querySelector(".modal__Register");
+const krestik = document.querySelector(".krestikk");
+
+LogInClick.addEventListener("click", function () {
+  LogInClick.classList.toggle("LogInClickActive");
+
+  if (LogInClick.classList.contains("LogInClickActive")) {
+    modalLogin.style.top = "15rem";
+  } else {
+    modalLogin.style.top = "-20rem";
+  }
+  if (LogInClick.classList.contains("LogInClickActive")) {
+    LogInOpen.style.top = "-9rem";
+  }
+});
+RegisterClick.addEventListener("click", function () {
+  RegisterClick.classList.toggle("RegisterClickActive");
+
+  if (RegisterClick.classList.contains("RegisterClickActive")) {
+    modalRegister.style.top = "15rem";
+  } else {
+    modalRegister.style.top = "-25rem";
+  }
+  if (RegisterClick.classList.contains("RegisterClickActive")) {
+    LogInOpen.style.top = "-9rem";
+  }
+});
+
+krestik.addEventListener("click", function () {
+  krestik.classList.toggle("krestikActive");
+
+  if (krestik.classList.contains("krestikActive")) {
+    modalRegister.style.top = "-25rem";
+  }
+});
 
 // Функция для перелистывания времен года по книгам
 const winterOpen = document.getElementById("myInputWinter");
@@ -108,43 +189,6 @@ autumnOpen.addEventListener("click", function () {
   }
 });
 //конец функции для перелистывания времен года
-
-// SlIDER мобильная версия
-// const images = document.querySelectorAll(".slider-img");
-// const svgScript = document.querySelectorAll(".svgScript");
-// const controlls = document.querySelectorAll(".controlls");
-// let imageIndex = 0;
-// let svgScriptIndex = 0;
-
-// function show(index) {
-//   images[imageIndex].classList.remove("active");
-//   images[index].classList.add("active");
-//   svgScript[svgScriptIndex].classList.remove("active");
-//   svgScript[index].classList.add("active");
-//   imageIndex = index;
-//   svgScriptIndex = index;
-// }
-
-// controlls.forEach((e) => {
-//   e.addEventListener("click", () => {
-//     if (event.target.classList.contains("carret__left")) {
-//       let index = imageIndex - 1;
-//       if (index < 0) {
-//         index = images.length - 1;
-//       }
-//       show(index);
-//     } else if (event.target.classList.contains("carret__right")) {
-//       let index = imageIndex + 1;
-//       if (index >= images.length) {
-//         index = 0;
-//       }
-//       show(index);
-//     }
-//   });
-// });
-// show(imageIndex);
-
-// конец слайдер мобильная версия
 
 // SLIDER полная версия
 
@@ -257,182 +301,3 @@ document.querySelector(".carret__left").addEventListener("click", function () {
     document.querySelector(".svgFive").classList.add("active1");
   }
 });
-
-// const svgOneOpen = document.querySelector(".svgOne");
-// const svgTooOpen = document.querySelector(".svgToo");
-// const svgThreeOpen = document.querySelector(".svgThree");
-// const zeroImages = document.querySelector(".png1");
-// const firstImages = document.querySelector(".png2");
-// const secondImages = document.querySelector(".png3");
-// const thirdImages = document.querySelector(".png4");
-// const fourthImages = document.querySelector(".png5");
-// svgOneOpen.addEventListener("click", function () {
-//   svgOneOpen.classList.toggle("svgOneOpen");
-//   svgOneOpen.classList.toggle("active");
-//   svgTooOpen.classList.remove("svgTooOpen", "active");
-//   svgThreeOpen.classList.remove("svgThreeOpen", "active");
-//   if (svgOneOpen.classList.contains("svgOneOpen")) {
-//     setTimeout(() => {
-//       zeroImages.style.display = "flex";
-//       firstImages.style.display = "flex";
-//       secondImages.style.display = "flex";
-//     }, 500);
-//     setTimeout(() => {
-//       zeroImages.style.opacity = "1";
-//       firstImages.style.opacity = "1";
-//       secondImages.style.opacity = "1";
-//       thirdImages.style.display = "none";
-//       fourthImages.style.display = "none";
-//     }, 1000);
-//     thirdImages.style.opacity = "0";
-//     fourthImages.style.opacity = "0";
-//   }
-// });
-// svgTooOpen.addEventListener("click", function () {
-//   svgTooOpen.classList.toggle("svgTooOpen");
-//   svgTooOpen.classList.toggle("active");
-//   svgOneOpen.classList.remove("svgOneOpen", "active");
-//   svgThreeOpen.classList.remove("svgThreeOpen", "active");
-//   if (svgTooOpen.classList.contains("svgTooOpen")) {
-//     setTimeout(() => {
-//       thirdImages.style.display = "flex";
-//       firstImages.style.display = "flex";
-//       secondImages.style.display = "flex";
-//     }, 500);
-//     setTimeout(() => {
-//       thirdImages.style.opacity = "1";
-//       firstImages.style.opacity = "1";
-//       secondImages.style.opacity = "1";
-//       zeroImages.style.display = "none";
-//       fourthImages.style.display = "none";
-//     }, 1000);
-//     zeroImages.style.opacity = "0";
-//     fourthImages.style.opacity = "0";
-//   }
-// });
-// svgThreeOpen.addEventListener("click", function () {
-//   svgThreeOpen.classList.toggle("svgThreeOpen");
-//   svgThreeOpen.classList.toggle("active");
-//   svgOneOpen.classList.remove("svgOneOpen", "active");
-//   svgTooOpen.classList.remove("svgTooOpen", "active");
-//   if (svgThreeOpen.classList.contains("svgThreeOpen")) {
-//     setTimeout(() => {
-//       thirdImages.style.display = "flex";
-//       fourthImages.style.display = "flex";
-//       secondImages.style.display = "flex";
-//     }, 500);
-//     setTimeout(() => {
-//       thirdImages.style.opacity = "1";
-//       fourthImages.style.opacity = "1";
-//       secondImages.style.opacity = "1";
-//       zeroImages.style.display = "none";
-//       firstImages.style.display = "none";
-//     }, 1000);
-//     zeroImages.style.opacity = "0";
-//     firstImages.style.opacity = "0";
-//   }
-// });
-
-// Slider max-width: 90rem
-
-// const svgOneOpen90rem = document.querySelector(".svgOne90rem");
-// const svgTooOpen90rem = document.querySelector(".svgToo90rem");
-// const svgThreeOpen90rem = document.querySelector(".svgThree90rem");
-// const svgFourOpen90rem = document.querySelector(".svgFour90rem");
-// const zeroImages90rem = document.querySelector(".png1");
-// const firstImages90rem = document.querySelector(".png2");
-// const secondImages90rem = document.querySelector(".png3");
-// const thirdImages90rem = document.querySelector(".png4");
-// const fourthImages90rem = document.querySelector(".png5");
-// svgOneOpen90rem.addEventListener("click", function () {
-//   svgOneOpen90rem.classList.toggle("svgOneOpen90rem");
-//   svgOneOpen90rem.classList.toggle("active");
-//   svgTooOpen90rem.classList.remove("svgTooOpen90rem", "active");
-//   svgThreeOpen90rem.classList.remove("svgThreeOpen90rem", "active");
-//   svgFourOpen90rem.classList.remove("svgFourOpen90rem", "active");
-//   if (svgOneOpen90rem.classList.contains("svgOneOpen90rem")) {
-//     setTimeout(() => {
-//       zeroImages90rem.style.display = "flex";
-//       firstImages90rem.style.display = "flex";
-//     }, 500);
-//     setTimeout(() => {
-//       zeroImages90rem.style.opacity = "1";
-//       firstImages90rem.style.opacity = "1";
-//       secondImages90rem.style.display = "none";
-//       thirdImages90rem.style.display = "none";
-//       fourthImages90rem.style.display = "none";
-//     }, 1000);
-//     secondImages90rem.style.opacity = "0";
-//     thirdImages90rem.style.opacity = "0";
-//     fourthImages90rem.style.opacity = "0";
-//   }
-// });
-// svgTooOpen90rem.addEventListener("click", function () {
-//   svgTooOpen90rem.classList.toggle("svgTooOpen90rem");
-//   svgTooOpen90rem.classList.toggle("active");
-//   svgOneOpen90rem.classList.remove("svgOneOpen90rem", "active");
-//   svgThreeOpen90rem.classList.remove("svgThreeOpen90rem", "active");
-//   svgFourOpen90rem.classList.remove("svgFourOpen90rem", "active");
-//   if (svgTooOpen90rem.classList.contains("svgTooOpen90rem")) {
-//     setTimeout(() => {
-//       secondImages90rem.style.display = "flex";
-//       firstImages90rem.style.display = "flex";
-//     }, 500);
-//     setTimeout(() => {
-//       secondImages90rem.style.opacity = "1";
-//       firstImages90rem.style.opacity = "1";
-//       zeroImages90rem.style.display = "none";
-//       thirdImages90rem.style.display = "none";
-//       fourthImages90rem.style.display = "none";
-//     }, 1000);
-//     zeroImages90rem.style.opacity = "0";
-//     thirdImages90rem.style.opacity = "0";
-//     fourthImages90rem.style.opacity = "0";
-//   }
-// });
-// svgThreeOpen90rem.addEventListener("click", function () {
-//   svgThreeOpen90rem.classList.toggle("svgThreeOpen90rem");
-//   svgThreeOpen90rem.classList.toggle("active");
-//   svgOneOpen90rem.classList.remove("svgOneOpen90rem", "active");
-//   svgTooOpen90rem.classList.remove("svgTooOpen90rem", "active");
-//   svgFourOpen90rem.classList.remove("svgFourOpen90rem", "active");
-//   if (svgThreeOpen90rem.classList.contains("svgThreeOpen90rem")) {
-//     setTimeout(() => {
-//       secondImages90rem.style.display = "flex";
-//       thirdImages90rem.style.display = "flex";
-//     }, 500);
-//     setTimeout(() => {
-//       secondImages90rem.style.opacity = "1";
-//       thirdImages90rem.style.opacity = "1";
-//       zeroImages90rem.style.display = "none";
-//       firstImages90rem.style.display = "none";
-//       fourthImages90rem.style.display = "none";
-//     }, 1000);
-//     zeroImages90rem.style.opacity = "0";
-//     firstImages90rem.style.opacity = "0";
-//     fourthImages90rem.style.opacity = "0";
-//   }
-// });
-// svgFourOpen90rem.addEventListener("click", function () {
-//   svgFourOpen90rem.classList.toggle("svgFourOpen90rem");
-//   svgFourOpen90rem.classList.toggle("active");
-//   svgOneOpen90rem.classList.remove("svgOneOpen90rem", "active");
-//   svgTooOpen90rem.classList.remove("svgTooOpen90rem", "active");
-//   svgThreeOpen90rem.classList.remove("svgThreeOpen90rem", "active");
-//   if (svgFourOpen90rem.classList.contains("svgFourOpen90rem")) {
-//     setTimeout(() => {
-//       fourthImages90rem.style.display = "flex";
-//       thirdImages90rem.style.display = "flex";
-//     }, 500);
-//     setTimeout(() => {
-//       fourthImages90rem.style.opacity = "1";
-//       thirdImages90rem.style.opacity = "1";
-//       zeroImages90rem.style.display = "none";
-//       firstImages90rem.style.display = "none";
-//       secondImages90rem.style.display = "none";
-//     }, 1000);
-//     zeroImages90rem.style.opacity = "0";
-//     firstImages90rem.style.opacity = "0";
-//     secondImages90rem.style.opacity = "0";
-//   }
-// });

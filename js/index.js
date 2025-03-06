@@ -63,15 +63,21 @@ const LogInClick = document.querySelector(".LogInClick");
 const modalLogin = document.querySelector(".modal__Login");
 const RegisterClick = document.querySelector(".RegisterClick");
 const modalRegister = document.querySelector(".modal__Register");
-const krestik = document.querySelector(".krestikk");
+const krestik = document.querySelector(".krestik");
+const krestikk = document.querySelector(".krestikk");
+const buyBooks = document.querySelectorAll(".favorites__button");
+const containerGray = document.querySelector(".containerGray");
 
 LogInClick.addEventListener("click", function () {
   LogInClick.classList.toggle("LogInClickActive");
-
+  containerGray.style.visibility = "visible";
+  containerGray.style.opacity = "0.8";
   if (LogInClick.classList.contains("LogInClickActive")) {
-    modalLogin.style.top = "15rem";
+    modalLogin.style.visibility = "visible";
+    modalLogin.style.opacity = "1";
   } else {
-    modalLogin.style.top = "-20rem";
+    modalLogin.style.opacity = "0";
+    modalLogin.style.visibility = "hidden";
   }
   if (LogInClick.classList.contains("LogInClickActive")) {
     LogInOpen.style.top = "-9rem";
@@ -79,11 +85,14 @@ LogInClick.addEventListener("click", function () {
 });
 RegisterClick.addEventListener("click", function () {
   RegisterClick.classList.toggle("RegisterClickActive");
-
+  containerGray.style.visibility = "visible";
+  containerGray.style.opacity = "0.8";
   if (RegisterClick.classList.contains("RegisterClickActive")) {
-    modalRegister.style.top = "15rem";
+    modalRegister.style.visibility = "visible";
+    modalRegister.style.opacity = "1";
   } else {
-    modalRegister.style.top = "-25rem";
+    modalRegister.style.visibility = "hidden";
+    modalRegister.style.opacity = "0";
   }
   if (RegisterClick.classList.contains("RegisterClickActive")) {
     LogInOpen.style.top = "-9rem";
@@ -91,11 +100,55 @@ RegisterClick.addEventListener("click", function () {
 });
 
 krestik.addEventListener("click", function () {
-  krestik.classList.toggle("krestikActive");
+  containerGray.style.visibility = "hidden";
+  containerGray.style.opacity = "0";
 
+  buyBooks.forEach((item) => {
+    item.classList.remove("buyActive");
+  });
+  krestik.classList.toggle("krestikActive");
   if (krestik.classList.contains("krestikActive")) {
-    modalRegister.style.top = "-25rem";
+    krestik.classList.remove("krestikActive");
+    imgLog.classList.remove("LogInActive");
+    krestikk.classList.remove("krestikActive");
+    LogInClick.classList.remove("LogInClickActive");
+    RegisterClick.classList.remove("RegisterClickActive");
+    modalLogin.style.visibility = "hidden";
+    modalLogin.style.opacity = "0";
   }
+});
+krestikk.addEventListener("click", function () {
+  containerGray.style.visibility = "hidden";
+  containerGray.style.opacity = "0";
+
+  krestikk.classList.toggle("krestikActive");
+
+  if (krestikk.classList.contains("krestikActive")) {
+    krestikk.classList.remove("krestikActive");
+    imgLog.classList.remove("LogInActive");
+    krestik.classList.remove("krestikActive");
+    LogInClick.classList.remove("LogInClickActive");
+    RegisterClick.classList.remove("RegisterClickActive");
+    modalRegister.style.visibility = "hidden";
+    modalRegister.style.opacity = "0";
+  }
+});
+
+buyBooks.forEach(function (buy) {
+  buy.addEventListener("click", function () {
+    containerGray.style.visibility = "visible";
+    containerGray.style.opacity = "0.8";
+
+    buy.classList.toggle("buyActive");
+    if (buy.classList.contains("buyActive")) {
+      imgLog.classList.remove("LogInActive");
+      krestikk.classList.remove("krestikActive");
+      LogInClick.classList.remove("LogInClickActive");
+      RegisterClick.classList.remove("RegisterClickActive");
+      modalLogin.style.visibility = "visible";
+      modalLogin.style.opacity = "1";
+    }
+  });
 });
 
 // Функция для перелистывания времен года по книгам

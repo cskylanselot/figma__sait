@@ -40,15 +40,15 @@ body {
     justify-content: center;
     overflow: hidden;
     gap: 2rem;
-    
   }
-  .slider {
-    max-width: 60rem;
-    height: 35rem;
-    display: flex;
-    gap: 2rem;
-    justify-content: start;
-    margin-left: 1.5rem;
+}
+.slider {
+  max-width: 60rem;
+  height: 35rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: start;
+  margin-left: 1.5rem;
 }
 @media screen and (max-width: 80rem) {
   .list__nav {
@@ -194,8 +194,8 @@ body {
   .imgLogMenu {
     display: flex;
     position: absolute;
-    right: 5rem;
-    top: 0;
+    right: 7rem;
+    top: 1rem;
   }
   .burger__menu {
     width: 2.8125rem;
@@ -349,6 +349,7 @@ body {
     display: flex;
     justify-content: start;
     gap: 2rem;
+  }
 }
 @media screen and (max-width: 48rem) {
   .header {

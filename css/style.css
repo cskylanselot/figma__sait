@@ -90,11 +90,12 @@ body {
   margin: 0;
   text-decoration: none;
 }
-/* Здесь заканчивается бургер меню */
-
 .text__nav:hover {
   color: #bb945f;
 }
+
+/* Здесь заканчивается бургер меню */
+
 /* Здесь начинается LogIn меню */
 .imgLogMenu {
   margin: 1.938rem 1.25rem 1.938rem 0;
@@ -103,7 +104,6 @@ body {
 }
 .imgLogMenu:hover {
   border-radius: 20px;
-  border: 1px solid #bb945f;
   background: #bb945f;
 }
 .dropMenuInOut {
@@ -122,10 +122,11 @@ body {
   transition: 0.5s;
 }
 .LogOut {
-  display: none;
+  z-index: 6;
   position: absolute;
-  top: 5rem;
-  right: 5rem;
+  right: 7rem;
+  top: -9rem;
+  transition: 0.5s;
 }
 .Profile {
   color: #000;
@@ -152,6 +153,201 @@ body {
   cursor: pointer;
 }
 /* Здесь заканчивается LogIn меню */
+
+/* Начало меню My Profile */
+
+.modal__profile {
+  width: 37.5rem;
+  height: 25rem;
+  background: #fff;
+  position: fixed;
+  display: flex;
+  margin-inline: auto;
+  inset-inline: 0;
+  inset-block-start: calc(40%);
+  z-index: 9;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+.bg {
+  width: 10.625rem;
+  height: 25.1875rem;
+  background: #0c0c0e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.name__and__avatar {
+  width: 7.5rem;
+  height: 7.8125rem;
+}
+.name {
+  width: 7.5rem;
+  height: 1.875rem;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.avatar {
+  width: 5rem;
+  height: 5rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  color: #bb945f;
+  font-family: Inter;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal__info {
+  position: relative;
+}
+.close__btn {
+  width: 0.9375rem;
+  height: 0.9375rem;
+  position: absolute;
+  top: 1.56rem;
+  right: -3.5rem;
+  cursor: pointer;
+}
+.My__profile {
+  margin: 0;
+  margin-top: 2.5rem;
+  margin-right: 3.75rem;
+  margin-bottom: 2.25rem;
+  color: #000;
+  text-align: center;
+  font-family: Forum;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+}
+.card__number {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.9375rem;
+}
+.card__number1 {
+  color: #0c0c0e;
+  text-align: center;
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+.card__number2 {
+  color: #bb945f;
+  text-align: center;
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+.cards__profile {
+  margin-left: 1.25rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+}
+.visits__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+}
+.cards__text {
+  margin: 0;
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  letter-spacing: 0.025rem;
+}
+.bonuses__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+}
+.book__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+}
+.Rented__books {
+  width: 21.875rem;
+  height: 6.25rem;
+}
+.Rented__hedear {
+  margin: 0;
+  margin-top: 1.25rem;
+  margin-left: 1.25rem;
+  margin-bottom: 1.88rem;
+  display: flex;
+  justify-content: start;
+  color: #0c0c0e;
+  text-align: center;
+  font-family: Inter;
+  font-size: 1.5625rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+.Rented__text {
+  margin: 0;
+  margin-bottom: 0.63rem;
+  color: #000;
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  letter-spacing: 0.125rem;
+  text-transform: capitalize;
+}
+.card__number {
+  margin: 0;
+  margin-top: 2.3rem;
+  margin-left: 1.25rem;
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 0.625rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  letter-spacing: 0.0125rem;
+}
+.card__number1 {
+  margin: 0;
+}
+.card__number1 {
+  margin: 0;
+}
+
+/* Конец меню My Profile */
+
 .modal__Login {
   width: 15.625rem;
   height: 16.375rem;
@@ -160,10 +356,10 @@ body {
   z-index: 9;
   opacity: 0;
   visibility: hidden;
-  transition: 0.5s;
+  transition: 1s;
   margin-inline: auto;
   inset-inline: 0;
-  inset-block-start: calc(50%);
+  inset-block-start: calc(40%);
 }
 .krestik {
   position: absolute;
@@ -255,6 +451,7 @@ input::-webkit-inner-spin-button {
   font-weight: 400;
 }
 .register {
+  margin: 0;
   margin-left: 0.5rem;
   color: #0c0c0e;
   font-family: Inter-Regular;
@@ -262,6 +459,7 @@ input::-webkit-inner-spin-button {
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.0625rem;
+  cursor: pointer;
 }
 .modal__Register {
   width: 15.625rem;
@@ -272,8 +470,9 @@ input::-webkit-inner-spin-button {
   visibility: hidden;
   z-index: 9;
   margin-inline: auto;
+  transition: 1s;
   inset-inline: 0;
-  inset-block-start: calc(50%);
+  inset-block-start: calc(40%);
 }
 .modal__buy__a__card {
   margin: 0 auto;
@@ -363,7 +562,7 @@ input::-webkit-inner-spin-button {
   position: fixed;
   z-index: 8;
   opacity: 0;
-  transition: 0.5s;
+  transition: 0.7s;
   visibility: hidden;
   height: 100vh;
   width: 100vw;

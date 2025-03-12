@@ -1,3 +1,5 @@
+export default removeClasslist;
+
 // Функция для открытия бургер меню
 
 const active = document.querySelector(".burger__menu");
@@ -60,13 +62,31 @@ imgLog.addEventListener("click", function () {
 // Log menu и Register menu
 
 const LogInClick = document.querySelector(".LogInClick");
+const LogInClick2 = document.querySelector(".LogInClick2");
 const modalLogin = document.querySelector(".modal__Login");
 const RegisterClick = document.querySelector(".RegisterClick");
+const RegisterClick2 = document.querySelector(".RegisterClick2");
 const modalRegister = document.querySelector(".modal__Register");
 const krestik = document.querySelector(".krestik");
 const krestikk = document.querySelector(".krestikk");
 const buyBooks = document.querySelectorAll(".favorites__button");
 const containerGray = document.querySelector(".containerGray");
+const containerGrayEnd = document.querySelector(".containerGrayEnd");
+
+function removeClasslist() {
+  krestikk.classList.remove("krestikActive");
+  imgLog.classList.remove("LogInActive");
+  krestik.classList.remove("krestikActive");
+  LogInClick.classList.remove("LogInClickActive");
+  RegisterClick.classList.remove("RegisterClickActive");
+  containerGrayEnd.classList.remove("containerGrayEndActive");
+  MyProfileClick.classList.remove("MyProfileClickActive");
+  closeBtn.classList.remove("closeBtnActive");
+  MyProfileClick.classList.remove("MyProfileClickActive");
+  buyBooks.forEach(function (buy) {
+    buy.classList.remove("buyActive");
+  });
+}
 
 LogInClick.addEventListener("click", function () {
   LogInClick.classList.toggle("LogInClickActive");
@@ -83,6 +103,24 @@ LogInClick.addEventListener("click", function () {
     LogInOpen.style.top = "-9rem";
   }
 });
+LogInClick2.addEventListener("click", function () {
+  LogInClick2.classList.toggle("LogInClickActive");
+  containerGray.style.visibility = "visible";
+  containerGray.style.opacity = "0.8";
+  if (LogInClick2.classList.contains("LogInClickActive")) {
+    modalLogin.style.visibility = "visible";
+    modalLogin.style.opacity = "1";
+    modalRegister.style.visibility = "hidden";
+    modalRegister.style.opacity = "0";
+  } else {
+    modalLogin.style.opacity = "0";
+    modalLogin.style.visibility = "hidden";
+  }
+  if (LogInClick2.classList.contains("LogInClickActive")) {
+    LogInOpen.style.top = "-9rem";
+  }
+  RegisterClick2.classList.remove("RegisterClickActive");
+});
 RegisterClick.addEventListener("click", function () {
   RegisterClick.classList.toggle("RegisterClickActive");
   containerGray.style.visibility = "visible";
@@ -98,6 +136,24 @@ RegisterClick.addEventListener("click", function () {
     LogInOpen.style.top = "-9rem";
   }
 });
+RegisterClick2.addEventListener("click", function () {
+  RegisterClick2.classList.toggle("RegisterClickActive");
+  containerGray.style.visibility = "visible";
+  containerGray.style.opacity = "0.8";
+  if (RegisterClick2.classList.contains("RegisterClickActive")) {
+    modalRegister.style.visibility = "visible";
+    modalRegister.style.opacity = "1";
+    modalLogin.style.opacity = "0";
+    modalLogin.style.visibility = "hidden";
+  } else {
+    modalRegister.style.visibility = "hidden";
+    modalRegister.style.opacity = "0";
+  }
+  if (RegisterClick2.classList.contains("RegisterClickActive")) {
+    LogInOpen.style.top = "-9rem";
+  }
+  LogInClick2.classList.remove("LogInClickActive");
+});
 
 krestik.addEventListener("click", function () {
   containerGray.style.visibility = "hidden";
@@ -108,11 +164,7 @@ krestik.addEventListener("click", function () {
   });
   krestik.classList.toggle("krestikActive");
   if (krestik.classList.contains("krestikActive")) {
-    krestik.classList.remove("krestikActive");
-    imgLog.classList.remove("LogInActive");
-    krestikk.classList.remove("krestikActive");
-    LogInClick.classList.remove("LogInClickActive");
-    RegisterClick.classList.remove("RegisterClickActive");
+    removeClasslist();
     modalLogin.style.visibility = "hidden";
     modalLogin.style.opacity = "0";
   }
@@ -124,13 +176,23 @@ krestikk.addEventListener("click", function () {
   krestikk.classList.toggle("krestikActive");
 
   if (krestikk.classList.contains("krestikActive")) {
-    krestikk.classList.remove("krestikActive");
-    imgLog.classList.remove("LogInActive");
-    krestik.classList.remove("krestikActive");
-    LogInClick.classList.remove("LogInClickActive");
-    RegisterClick.classList.remove("RegisterClickActive");
+    removeClasslist();
     modalRegister.style.visibility = "hidden";
     modalRegister.style.opacity = "0";
+  }
+});
+containerGrayEnd.addEventListener("click", function () {
+  containerGray.style.visibility = "hidden";
+  containerGray.style.opacity = "0";
+
+  containerGrayEnd.classList.toggle("containerGrayEndActive");
+
+  if (containerGrayEnd.classList.contains("containerGrayEndActive")) {
+    removeClasslist();
+    modalRegister.style.visibility = "hidden";
+    modalRegister.style.opacity = "0";
+    modalLogin.style.visibility = "hidden";
+    modalLogin.style.opacity = "0";
   }
 });
 
@@ -141,14 +203,47 @@ buyBooks.forEach(function (buy) {
 
     buy.classList.toggle("buyActive");
     if (buy.classList.contains("buyActive")) {
-      imgLog.classList.remove("LogInActive");
-      krestikk.classList.remove("krestikActive");
-      LogInClick.classList.remove("LogInClickActive");
-      RegisterClick.classList.remove("RegisterClickActive");
+      removeClasslist();
       modalLogin.style.visibility = "visible";
       modalLogin.style.opacity = "1";
     }
   });
+});
+
+// My profile menu
+
+const MyProfileClick = document.querySelector(".MyProfileClick");
+const MyProfile = document.querySelector(".modal__profile");
+const myProfileOpen = document.querySelector(".LogOut");
+const closeBtn = document.querySelector(".close__btn");
+
+MyProfileClick.addEventListener("click", function () {
+  MyProfileClick.classList.toggle("MyProfileClickActive");
+  containerGray.style.visibility = "visible";
+  containerGray.style.opacity = "0.8";
+  if (MyProfileClick.classList.contains("MyProfileClickActive")) {
+    MyProfile.style.visibility = "visible";
+    MyProfile.style.opacity = "1";
+  } else {
+    MyProfile.style.opacity = "0";
+    MyProfile.style.visibility = "hidden";
+  }
+  if (MyProfileClick.classList.contains("MyProfileClickActive")) {
+    myProfileOpen.style.top = "-9rem";
+  }
+});
+closeBtn.addEventListener("click", function () {
+  containerGray.style.visibility = "hidden";
+  containerGray.style.opacity = "0";
+
+  closeBtn.classList.toggle("closeBtnActive");
+
+  if (closeBtn.classList.contains("closeBtnActive")) {
+    removeClasslist();
+    MyProfile.style.visibility = "hidden";
+    MyProfile.style.opacity = "0";
+    myProfileOpen.style.top = "9rem";
+  }
 });
 
 // Функция для перелистывания времен года по книгам

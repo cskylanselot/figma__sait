@@ -6,14 +6,15 @@
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/media.css" />
-    <script src="js/index.js" defer></script>
+    <script src="js/index.js" type="module" defer></script>
+    <script src="js/localStorage.js" type="module" defer></script>
     <title>figma sait</title>
   </head>
   <body id="elementBody">
+    <div class="containerGray containerGrayEnd">
+      <!-- ////////////////////// -->
+    </div>
     <div class="main__body">
-      <div class="containerGray">
-        <!-- ////////////////////// -->
-      </div>
       <nav id="burger__id" class="nav_burger">
         <ul class="list__nav_burger">
           <li>
@@ -80,18 +81,18 @@
             </svg>
           </div>
           <h2 class="LogInMenuOpen">LOGIN</h2>
-          <p class="modal__text">E-mail or readers card</p>
-          <input type="text" />
-          <p class="modal__text">Password</p>
-          <input type="number" />
+          <label for="EMailOrReadersCard"><p class="modal__text">E-mail or readers card</p></label>
+          <input type="email" id="EMailOrReadersCard" placeholder="e-mail"/>
+          <label for="passwordLogIn"><p class="modal__text">Password</p></label>
+          <input type="password"  id="passwordLogIn" placeholder="password"/>
           <div>
             <button class="modal__text__button">
-              <p class="modal__button__text">Log In</p>
+              <p class="modal__button__text LogInMenuClick">Log In</p>
             </button>
           </div>
           <div class="register__menu">
             <p class="modal__text__mini">Don't have an account?</p>
-            <a class="register" href="">Register</a>
+            <p class="register RegisterClick2"><ins>Register</ins></p>
           </div>
         </div>
         <div class="modal__Register">
@@ -119,26 +120,30 @@
             oninput="this.value = this.value.replace(/[^a-zа-яё\s]/gi,'')"
             placeholder=""
             class="inputRegister"
+            id="FirstName"
+            maxlength="12"
           />
           <p class="modal__text">Last name</p>
           <input
             type="text"
-            oninput="this.value = this.value.replace(/[^a-zа-яё\s]/gi,'')"
+            oninput="this.value = this.value.replace(/[^a-zа-яё\s]/gi,'')" 
             placeholder=""
             class="inputRegister"
+            id="LastName"
+            maxlength="20"
           />
           <p class="modal__text">E-mail</p>
-          <input type="text" />
+          <input type="text" id="EMail" />
           <p class="modal__text">Password</p>
-          <input type="number" />
+          <input type="password" id="PasswordReg"/>
           <div>
             <button class="modal__text__button">
-              <p class="modal__button__text">Sing Up</p>
+              <p class="modal__button__text SingUp">Sing Up</p>
             </button>
           </div>
           <div class="register__menu">
             <p class="modal__text__mini">Already have an account?</p>
-            <a class="register" href="">Login</a>
+            <p class="register LogInClick2" ><ins>Login</ins></p>
           </div>
         </div>
       </header>
@@ -152,7 +157,7 @@
         <div class="dropMenu LogOut">
           <p class="Profile">Profile</p>
           <div class="line4"></div>
-          <p class="dropMenu__text">My profile</p>
+          <p class="dropMenu__text MyProfileClick">My profile</p>
           <p class="dropMenu__text">Log Out</p>
         </div>
         <div class="img1">
@@ -162,6 +167,118 @@
               <br />Welcome<br />
               to the Brooklyn <br />Library <br />
             </p>
+          </div>
+        </div>
+        <div class="modal__profile">
+          <div class="bg">
+            <div class="name__and__avatar">
+              <div class="avatar">JD</div>
+              <div class="name">John Doe</div>
+            </div>
+          </div>
+          <div class="modal__info">
+            <div class="My__profile">My profile</div>
+            <div class="cards__profile">
+              <div class="visits__info">
+                <p class="cards__text">Visits</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="21"
+                  height="21"
+                  viewBox="0 0 21 21"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M10.5 10C13.2614 10 15.5 7.76143 15.5 5C15.5 2.23857 13.2614 0 10.5 0C7.73857 0 5.5 2.23857 5.5 5C5.5 7.76143 7.73857 10 10.5 10ZM17.5711 13.9289C19.4464 15.8043 20.5 18.3478 20.5 21H10.5H0.5C0.5 18.3478 1.55357 15.8043 3.42894 13.9289C5.30429 12.0536 7.84784 11 10.5 11C13.1522 11 15.6957 12.0536 17.5711 13.9289Z"
+                    fill="#BB945F"
+                  />
+                </svg>
+                <span class="cards__number">23</span>
+              </div>
+              <div class="bonuses__info">
+                <p class="cards__text">Bonuses</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="21"
+                  viewBox="0 0 20 21"
+                  fill="none"
+                >
+                  <path
+                    d="M10 0L12.2249 3.31001L15.8779 2.00532L15.8249 6.05634L19.5106 7.25532L17.2 10.5L19.5106 13.7447L15.8249 14.9437L15.8779 18.9947L12.2249 17.69L10 21L7.77508 17.69L4.12215 18.9947L4.17508 14.9437L0.489435 13.7447L2.8 10.5L0.489435 7.25532L4.17508 6.05634L4.12215 2.00532L7.77508 3.31001L10 0Z"
+                    fill="#BB945F"
+                  />
+                </svg>
+                <span class="cards__number">1240</span>
+              </div>
+              <div class="book__info">
+                <p class="cards__text">Books</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="21"
+                  viewBox="0 0 20 21"
+                  fill="none"
+                >
+                  <rect width="20" height="21" fill="#BB945F" />
+                  <rect x="2" width="1" height="19" fill="#826844" />
+                  <rect x="1" width="1" height="21" fill="white" />
+                </svg>
+                <span class="cards__number">2</span>
+              </div>
+            </div>
+            <div class="Rented__books">
+              <h2 class="Rented__hedear">Rented books</h2>
+              <ul class="Rented__list">
+                <li class="Rented__text">The Last Queen, Clive Irving</li>
+                <li class="Rented__text">Dominicana, Angie Cruz</li>
+              </ul>
+            </div>
+            <div class="card__number">
+              <p class="card__number1">Card number</p>
+              <span class="card__number2">F00234030</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="12"
+                viewBox="0 0 14 12"
+                fill="none"
+              >
+                <rect
+                  x="2.46826"
+                  y="0.25"
+                  width="10.5917"
+                  height="9.5"
+                  rx="0.75"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+                <rect
+                  x="0.25"
+                  y="2.25"
+                  width="10.5917"
+                  height="9.5"
+                  rx="0.75"
+                  fill="white"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+              </svg>
+            </div>
+            <div class="close__btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="19"
+                height="19"
+                viewBox="0 0 19 19"
+                fill="none"
+              >
+                <path d="M2 16.8507L17 2.00001" stroke="#0C0C0E" stroke-width="3" />
+                <path d="M2 2.14928L17 17" stroke="#0C0C0E" stroke-width="3" />
+              </svg>
+            </div>
           </div>
         </div>
         <div class="about" id="about anchor">

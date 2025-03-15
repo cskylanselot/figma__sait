@@ -1,5 +1,14 @@
 export default removeClasslist;
 
+// Для нормальной роботы якоря
+
+document.querySelector(".anchor").addEventListener("submit", function (event) {
+  event.preventDefault();
+  window.location.href = window.location.pathname;
+});
+
+//
+
 // Функция для открытия бургер меню
 
 const active = document.querySelector(".burger__menu");
@@ -38,177 +47,44 @@ function burgerMenu() {
     element.style.overflowY = "visible";
   }
 }
-//
+//Функция для открытия бургер меню конец
 
 // LogIn menu
 const LogInOpen = document.querySelector(".LogIn");
-
+const LogOutBtn = document.querySelector(".LogOutBtn");
 const imgLog = document.querySelector(".imgLogMenu");
 
+LogOutBtn.addEventListener("click", function () {
+  localStorage.setItem("keyEnter", 0);
+  location.reload();
+});
+
 imgLog.addEventListener("click", function () {
-  imgLog.classList.toggle("LogInActive");
-  if (active.classList.contains("active")) {
-    active.classList.remove("active");
-    navOpen.style.top = "-30rem";
-  }
-  if (imgLog.classList.contains("LogInActive")) {
-    LogInOpen.style.top = "5rem";
+  if (localStorage.getItem("keyEnter") == 1) {
+    imgLog.classList.toggle("LogInActive");
+    if (active.classList.contains("active")) {
+      active.classList.remove("active");
+      navOpen.style.top = "-30rem";
+    }
+    if (imgLog.classList.contains("LogInActive")) {
+      myProfileOpen.style.top = "5rem";
+    } else {
+      myProfileOpen.style.top = "-9rem";
+    }
   } else {
-    LogInOpen.style.top = "-9rem";
+    imgLog.classList.toggle("LogInActive");
+    if (active.classList.contains("active")) {
+      active.classList.remove("active");
+      navOpen.style.top = "-30rem";
+    }
+    if (imgLog.classList.contains("LogInActive")) {
+      LogInOpen.style.top = "5rem";
+    } else {
+      LogInOpen.style.top = "-9rem";
+    }
   }
 });
 // Конец LogIn menu
-
-// Log menu и Register menu
-
-const LogInClick = document.querySelector(".LogInClick");
-const LogInClick2 = document.querySelector(".LogInClick2");
-const modalLogin = document.querySelector(".modal__Login");
-const RegisterClick = document.querySelector(".RegisterClick");
-const RegisterClick2 = document.querySelector(".RegisterClick2");
-const modalRegister = document.querySelector(".modal__Register");
-const krestik = document.querySelector(".krestik");
-const krestikk = document.querySelector(".krestikk");
-const buyBooks = document.querySelectorAll(".favorites__button");
-const containerGray = document.querySelector(".containerGray");
-const containerGrayEnd = document.querySelector(".containerGrayEnd");
-
-function removeClasslist() {
-  krestikk.classList.remove("krestikActive");
-  imgLog.classList.remove("LogInActive");
-  krestik.classList.remove("krestikActive");
-  LogInClick.classList.remove("LogInClickActive");
-  RegisterClick.classList.remove("RegisterClickActive");
-  containerGrayEnd.classList.remove("containerGrayEndActive");
-  MyProfileClick.classList.remove("MyProfileClickActive");
-  closeBtn.classList.remove("closeBtnActive");
-  MyProfileClick.classList.remove("MyProfileClickActive");
-  buyBooks.forEach(function (buy) {
-    buy.classList.remove("buyActive");
-  });
-}
-
-LogInClick.addEventListener("click", function () {
-  LogInClick.classList.toggle("LogInClickActive");
-  containerGray.style.visibility = "visible";
-  containerGray.style.opacity = "0.8";
-  if (LogInClick.classList.contains("LogInClickActive")) {
-    modalLogin.style.visibility = "visible";
-    modalLogin.style.opacity = "1";
-  } else {
-    modalLogin.style.opacity = "0";
-    modalLogin.style.visibility = "hidden";
-  }
-  if (LogInClick.classList.contains("LogInClickActive")) {
-    LogInOpen.style.top = "-9rem";
-  }
-});
-LogInClick2.addEventListener("click", function () {
-  LogInClick2.classList.toggle("LogInClickActive");
-  containerGray.style.visibility = "visible";
-  containerGray.style.opacity = "0.8";
-  if (LogInClick2.classList.contains("LogInClickActive")) {
-    modalLogin.style.visibility = "visible";
-    modalLogin.style.opacity = "1";
-    modalRegister.style.visibility = "hidden";
-    modalRegister.style.opacity = "0";
-  } else {
-    modalLogin.style.opacity = "0";
-    modalLogin.style.visibility = "hidden";
-  }
-  if (LogInClick2.classList.contains("LogInClickActive")) {
-    LogInOpen.style.top = "-9rem";
-  }
-  RegisterClick2.classList.remove("RegisterClickActive");
-});
-RegisterClick.addEventListener("click", function () {
-  RegisterClick.classList.toggle("RegisterClickActive");
-  containerGray.style.visibility = "visible";
-  containerGray.style.opacity = "0.8";
-  if (RegisterClick.classList.contains("RegisterClickActive")) {
-    modalRegister.style.visibility = "visible";
-    modalRegister.style.opacity = "1";
-  } else {
-    modalRegister.style.visibility = "hidden";
-    modalRegister.style.opacity = "0";
-  }
-  if (RegisterClick.classList.contains("RegisterClickActive")) {
-    LogInOpen.style.top = "-9rem";
-  }
-});
-RegisterClick2.addEventListener("click", function () {
-  RegisterClick2.classList.toggle("RegisterClickActive");
-  containerGray.style.visibility = "visible";
-  containerGray.style.opacity = "0.8";
-  if (RegisterClick2.classList.contains("RegisterClickActive")) {
-    modalRegister.style.visibility = "visible";
-    modalRegister.style.opacity = "1";
-    modalLogin.style.opacity = "0";
-    modalLogin.style.visibility = "hidden";
-  } else {
-    modalRegister.style.visibility = "hidden";
-    modalRegister.style.opacity = "0";
-  }
-  if (RegisterClick2.classList.contains("RegisterClickActive")) {
-    LogInOpen.style.top = "-9rem";
-  }
-  LogInClick2.classList.remove("LogInClickActive");
-});
-
-krestik.addEventListener("click", function () {
-  containerGray.style.visibility = "hidden";
-  containerGray.style.opacity = "0";
-
-  buyBooks.forEach((item) => {
-    item.classList.remove("buyActive");
-  });
-  krestik.classList.toggle("krestikActive");
-  if (krestik.classList.contains("krestikActive")) {
-    removeClasslist();
-    modalLogin.style.visibility = "hidden";
-    modalLogin.style.opacity = "0";
-  }
-});
-krestikk.addEventListener("click", function () {
-  containerGray.style.visibility = "hidden";
-  containerGray.style.opacity = "0";
-
-  krestikk.classList.toggle("krestikActive");
-
-  if (krestikk.classList.contains("krestikActive")) {
-    removeClasslist();
-    modalRegister.style.visibility = "hidden";
-    modalRegister.style.opacity = "0";
-  }
-});
-containerGrayEnd.addEventListener("click", function () {
-  containerGray.style.visibility = "hidden";
-  containerGray.style.opacity = "0";
-
-  containerGrayEnd.classList.toggle("containerGrayEndActive");
-
-  if (containerGrayEnd.classList.contains("containerGrayEndActive")) {
-    removeClasslist();
-    modalRegister.style.visibility = "hidden";
-    modalRegister.style.opacity = "0";
-    modalLogin.style.visibility = "hidden";
-    modalLogin.style.opacity = "0";
-  }
-});
-
-buyBooks.forEach(function (buy) {
-  buy.addEventListener("click", function () {
-    containerGray.style.visibility = "visible";
-    containerGray.style.opacity = "0.8";
-
-    buy.classList.toggle("buyActive");
-    if (buy.classList.contains("buyActive")) {
-      removeClasslist();
-      modalLogin.style.visibility = "visible";
-      modalLogin.style.opacity = "1";
-    }
-  });
-});
 
 // My profile menu
 
@@ -242,9 +118,212 @@ closeBtn.addEventListener("click", function () {
     removeClasslist();
     MyProfile.style.visibility = "hidden";
     MyProfile.style.opacity = "0";
-    myProfileOpen.style.top = "9rem";
   }
 });
+
+// Конец My profile menu
+
+// Log menu и Register menu
+
+const LogInClick = document.querySelector(".LogInClick");
+const LogInClick2 = document.querySelector(".LogInClick2");
+const modalLogin = document.querySelector(".modal__Login");
+const RegisterClick = document.querySelector(".RegisterClick");
+const RegisterClick2 = document.querySelector(".RegisterClick2");
+const modalRegister = document.querySelector(".modal__Register");
+const krestik = document.querySelector(".krestik");
+const krestikk = document.querySelector(".krestikk");
+const krestikkk = document.querySelector(".krestikkk");
+const buyBooks = document.querySelectorAll(".favorites__button");
+const containerGray = document.querySelector(".containerGray");
+const containerGrayEnd = document.querySelector(".containerGrayEnd");
+
+function removeClasslist() {
+  krestikk.classList.remove("krestikActive");
+  imgLog.classList.remove("LogInActive");
+  krestik.classList.remove("krestikActive");
+  LogInClick.classList.remove("LogInClickActive");
+  RegisterClick.classList.remove("RegisterClickActive");
+  containerGrayEnd.classList.remove("containerGrayEndActive");
+  MyProfileClick.classList.remove("MyProfileClickActive");
+  closeBtn.classList.remove("closeBtnActive");
+  MyProfileClick.classList.remove("MyProfileClickActive");
+  buyBooks.forEach(function (buy) {
+    buy.classList.remove("buyActive");
+  });
+  modalBuyACard.style.visibility = "hidden";
+  modalBuyACard.style.opacity = "0";
+}
+
+LogInClick.addEventListener("click", function () {
+  LogInClick.classList.toggle("LogInClickActive");
+  containerGray.style.visibility = "visible";
+  containerGray.style.opacity = "0.8";
+  if (LogInClick.classList.contains("LogInClickActive")) {
+    modalLogin.style.visibility = "visible";
+    modalLogin.style.opacity = "1";
+  } else {
+    modalLogin.style.opacity = "0";
+    modalLogin.style.visibility = "hidden";
+  }
+  if (LogInClick.classList.contains("LogInClickActive")) {
+    LogInOpen.style.top = "-9rem";
+  }
+});
+LogInClick2.addEventListener("click", function () {
+  LogInClick2.classList.toggle("LogInClickActive");
+  containerGray.style.visibility = "visible";
+  containerGray.style.opacity = "0.8";
+  if (LogInClick2.classList.contains("LogInClickActive")) {
+    modalLogin.style.visibility = "visible";
+    modalLogin.style.opacity = "1";
+    modalRegister.style.visibility = "hidden";
+    modalRegister.style.opacity = "0";
+    LogInOpen.style.top = "-9rem";
+  } else {
+    modalLogin.style.opacity = "0";
+    modalLogin.style.visibility = "hidden";
+  }
+  RegisterClick2.classList.remove("RegisterClickActive");
+});
+RegisterClick.addEventListener("click", function () {
+  RegisterClick.classList.toggle("RegisterClickActive");
+  containerGray.style.visibility = "visible";
+  containerGray.style.opacity = "0.8";
+  if (RegisterClick.classList.contains("RegisterClickActive")) {
+    modalRegister.style.visibility = "visible";
+    modalRegister.style.opacity = "1";
+  } else {
+    modalRegister.style.visibility = "hidden";
+    modalRegister.style.opacity = "0";
+  }
+  if (RegisterClick.classList.contains("RegisterClickActive")) {
+    LogInOpen.style.top = "-9rem";
+  }
+});
+RegisterClick2.addEventListener("click", function () {
+  RegisterClick2.classList.toggle("RegisterClickActive");
+  containerGray.style.visibility = "visible";
+  containerGray.style.opacity = "0.8";
+  if (RegisterClick2.classList.contains("RegisterClickActive")) {
+    modalRegister.style.visibility = "visible";
+    modalRegister.style.opacity = "1";
+    modalLogin.style.opacity = "0";
+    modalLogin.style.visibility = "hidden";
+    LogInOpen.style.top = "-9rem";
+  } else {
+    modalRegister.style.visibility = "hidden";
+    modalRegister.style.opacity = "0";
+  }
+  LogInClick2.classList.remove("LogInClickActive");
+});
+
+krestik.addEventListener("click", function () {
+  containerGray.style.visibility = "hidden";
+  containerGray.style.opacity = "0";
+
+  buyBooks.forEach((item) => {
+    item.classList.remove("buyActive");
+  });
+  krestik.classList.toggle("krestikActive");
+  if (krestik.classList.contains("krestikActive")) {
+    removeClasslist();
+    modalLogin.style.visibility = "hidden";
+    modalLogin.style.opacity = "0";
+  }
+});
+krestikk.addEventListener("click", function () {
+  containerGray.style.visibility = "hidden";
+  containerGray.style.opacity = "0";
+
+  krestikk.classList.toggle("krestikActive");
+
+  if (krestikk.classList.contains("krestikActive")) {
+    removeClasslist();
+    modalRegister.style.visibility = "hidden";
+    modalRegister.style.opacity = "0";
+  }
+});
+
+krestikkk.addEventListener("click", function () {
+  modalBuyACard.style.visibility = "hidden";
+  modalBuyACard.style.opacity = "0";
+  containerGray.style.visibility = "hidden";
+  containerGray.style.opacity = "0";
+});
+
+containerGrayEnd.addEventListener("click", function () {
+  containerGray.style.visibility = "hidden";
+  containerGray.style.opacity = "0";
+
+  containerGrayEnd.classList.toggle("containerGrayEndActive");
+
+  if (containerGrayEnd.classList.contains("containerGrayEndActive")) {
+    removeClasslist();
+    modalRegister.style.visibility = "hidden";
+    modalRegister.style.opacity = "0";
+    modalLogin.style.visibility = "hidden";
+    modalLogin.style.opacity = "0";
+  }
+});
+// Конец Log menu и Register menu
+
+// Первая буква заглавная в регистр меню
+
+const input = document.querySelectorAll(".inputRegister");
+
+input.forEach(function (inputName) {
+  inputName.addEventListener("input", function () {
+    this.value = this.value.replace(/\s/g, "");
+    if (this.value.length > 0) {
+      this.value =
+        this.value[0].toUpperCase() + this.value.slice(1).toLowerCase();
+    }
+  });
+});
+
+//Конец функции для первой заглавной буквы
+
+// Поле password
+
+const passwordJS = document.querySelectorAll(".passwordJS");
+const PasswordReg = document.getElementById("PasswordReg");
+const passwordLogIn = document.getElementById("passwordLogIn");
+const errorMessage = document.querySelector(".errorMessage");
+const errorMessage1 = document.querySelector(".errorMessage1");
+
+passwordJS.forEach(function (passwordName) {
+  passwordName.addEventListener("input", function () {
+    this.value = this.value.replace(/\s/g, "");
+  });
+});
+modalRegister.addEventListener("submit", function (event) {
+  if (PasswordReg.value.length < 8) {
+    event.preventDefault();
+    errorMessage.style.display = "block";
+  }
+});
+modalLogin.addEventListener("submit", function (event) {
+  if (passwordLogIn.value.length < 8) {
+    event.preventDefault();
+    errorMessage1.style.display = "block";
+  }
+});
+
+// Конец поля password
+
+// Поле только е-маил
+
+const emailForm = document.querySelector(".modal__Register");
+const EMail = document.getElementById("EMail");
+
+emailForm.addEventListener("submit", function () {
+  const emailPattern = /.+@example.com/;
+  if (!emailPattern.test(EMail.value)) {
+  }
+});
+
+// Конец поля только е-маил
 
 // Функция для перелистывания времен года по книгам
 const winterOpen = document.getElementById("myInputWinter");
@@ -337,6 +416,58 @@ autumnOpen.addEventListener("click", function () {
   }
 });
 //конец функции для перелистывания времен года
+
+// Buy a librart card меню при нажатии на buy
+const modalBuyACard = document.querySelector(".modal__buy__a__card5");
+
+buyBooks.forEach(function (buy) {
+  buy.addEventListener("click", function () {
+    containerGray.style.visibility = "visible";
+    containerGray.style.opacity = "0.8";
+    if (localStorage.getItem("keyEnter") == 1) {
+      buy.classList.toggle("buyActive");
+      if (buy.classList.contains("buyActive")) {
+        removeClasslist();
+        modalBuyACard.style.visibility = "visible";
+        modalBuyACard.style.opacity = "1";
+      } else {
+        containerGray.style.visibility = "visible";
+        containerGray.style.opacity = "0.8";
+        buy.classList.toggle("buyActive");
+        if (buy.classList.contains("buyActive")) {
+          removeClasslist();
+          modalLogin.style.visibility = "visible";
+          modalLogin.style.opacity = "1";
+        }
+      }
+    } else {
+      buy.classList.toggle("buyActive");
+      if (buy.classList.contains("buyActive")) {
+        removeClasslist();
+        modalLogin.style.visibility = "visible";
+        modalLogin.style.opacity = "1";
+      }
+    }
+  });
+});
+
+// Конец Buy a librart card меню при нажатии на buy
+
+// Digital Library Cards замена
+
+const LibraryCard5 = document.querySelector(".LibraryCard5");
+const LibraryCard = document.querySelector(".LibraryCard");
+
+window.addEventListener("load", () => {
+  if (localStorage.getItem("keyEnter") == 1) {
+    LibraryCard5.style.display = "block";
+    LibraryCard.style.display = "none";
+  } else {
+    LibraryCard5.style.display = "none";
+    LibraryCard.style.display = "block";
+  }
+});
+// Digital Library Cards конец
 
 // SLIDER полная версия
 

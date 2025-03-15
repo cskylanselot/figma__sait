@@ -18,21 +18,25 @@
       <nav id="burger__id" class="nav_burger">
         <ul class="list__nav_burger">
           <li>
-            <a href="#about anchor" class="text__nav_burger"> About </a>
+            <a href="#about anchor" class="text__nav_burger anchor"> About </a>
           </li>
           <li>
-            <a href="#favorites anchor" class="text__nav_burger"> Favorites </a>
+            <a href="#favorites anchor" class="text__nav_burger anchor">
+              Favorites
+            </a>
           </li>
           <li>
-            <a href="#Coffe shop anchor" class="text__nav_burger">
+            <a href="#Coffe shop anchor" class="text__nav_burger anchor">
               Coffee shop
             </a>
           </li>
           <li>
-            <a href="#Contacts anchor" class="text__nav_burger">Contacts</a>
+            <a href="#Contacts anchor" class="text__nav_burger anchor"
+              >Contacts</a
+            >
           </li>
           <li>
-            <a href="#Library Card anchor" class="text__nav_burger">
+            <a href="#Library Card anchor" class="text__nav_burger anchor">
               Library Card
             </a>
           </li>
@@ -43,26 +47,31 @@
         <nav class="nav">
           <ul class="list__nav">
             <li>
-              <a href="#about anchor" class="text__nav">About</a>
+              <a href="#about anchor" class="text__nav anchor">About</a>
             </li>
             <li>
-              <a href="#favorites anchor" class="text__nav">Favorites</a>
+              <a href="#favorites anchor" class="text__nav anchor">Favorites</a>
             </li>
             <li>
-              <a href="#Coffe shop anchor" class="text__nav">Coffee shop</a>
+              <a href="#Coffe shop anchor" class="text__nav anchor"
+                >Coffee shop</a
+              >
             </li>
             <li>
-              <a href="#Contacts anchor" class="text__nav">Contacts</a>
+              <a href="#Contacts anchor" class="text__nav anchor">Contacts</a>
             </li>
             <li>
-              <a href="#Library Card anchor" class="text__nav">Library Card</a>
+              <a href="#Library Card anchor" class="text__nav anchor"
+                >Library Card</a
+              >
             </li>
             <img class="imgLogMenu" src="img/icon_profile.svg" alt="" />
           </ul>
           <div class="burger__menu" id="burger__id__click">
             <span></span>
+          </div>
         </nav>
-        <div class="modal__Login">
+        <form class="modal__Login">
           <div class="krestik">
             <svg
               class="krestiksvg"
@@ -81,21 +90,34 @@
             </svg>
           </div>
           <h2 class="LogInMenuOpen">LOGIN</h2>
-          <label for="EMailOrReadersCard"><p class="modal__text">E-mail or readers card</p></label>
-          <input type="email" id="EMailOrReadersCard" placeholder="e-mail"/>
+          <label for="EMailOrReadersCard"
+            ><p class="modal__text">E-mail or readers card</p></label
+          >
+          <input
+            type="email"
+            id="EMailOrReadersCard"
+            placeholder="e-mail"
+            required
+          />
           <label for="passwordLogIn"><p class="modal__text">Password</p></label>
-          <input type="password"  id="passwordLogIn" placeholder="password"/>
-          <div>
-            <button class="modal__text__button">
-              <p class="modal__button__text LogInMenuClick">Log In</p>
-            </button>
-          </div>
+          <input
+            type="password"
+            id="passwordLogIn"
+            placeholder="password"
+            minlength="8"
+            class="passwordJS"
+            required
+          />
+          <div class="errorMessage1">Password must be 8 symbol or more</div>
+          <button type="submit" class="modal__text__button">
+            <p class="modal__button__text LogInMenuClick">Log In</p>
+          </button>
           <div class="register__menu">
             <p class="modal__text__mini">Don't have an account?</p>
             <p class="register RegisterClick2"><ins>Register</ins></p>
           </div>
-        </div>
-        <div class="modal__Register">
+        </form>
+        <form class="modal__Register">
           <div class="krestikk">
             <svg
               class="krestiksvg"
@@ -114,38 +136,46 @@
             </svg>
           </div>
           <h2 class="LogInMenuOpen">REGISTER</h2>
-          <p class="modal__text">First name</p>
+          <label for="FirstName"><p class="modal__text">First name</p></label>
           <input
             type="text"
             oninput="this.value = this.value.replace(/[^a-zа-яё\s]/gi,'')"
-            placeholder=""
+            placeholder="First name"
             class="inputRegister"
             id="FirstName"
             maxlength="12"
+            required
           />
-          <p class="modal__text">Last name</p>
+          <label for="LastName"><p class="modal__text">Last name</p></label>
           <input
             type="text"
-            oninput="this.value = this.value.replace(/[^a-zа-яё\s]/gi,'')" 
-            placeholder=""
+            oninput="this.value = this.value.replace(/[^a-zа-яё\s]/gi,'')"
+            placeholder="Last name"
             class="inputRegister"
             id="LastName"
             maxlength="20"
+            required
           />
-          <p class="modal__text">E-mail</p>
-          <input type="text" id="EMail" />
-          <p class="modal__text">Password</p>
-          <input type="password" id="PasswordReg"/>
-          <div>
-            <button class="modal__text__button">
-              <p class="modal__button__text SingUp">Sing Up</p>
-            </button>
-          </div>
+          <label for="EMail"><p class="modal__text">E-mail</p></label>
+          <input type="email" id="EMail" placeholder="e-mail" required />
+          <label for="PasswordReg"><p class="modal__text">Password</p></label>
+          <input
+            type="password"
+            id="PasswordReg"
+            placeholder="password"
+            minlength="8"
+            class="passwordJS"
+            required
+          />
+          <div class="errorMessage">Password must be 8 symbol or more</div>
+          <button type="submit" class="modal__text__button SingUp">
+            <p class="modal__button__text">Sing Up</p>
+          </button>
           <div class="register__menu">
             <p class="modal__text__mini">Already have an account?</p>
-            <p class="register LogInClick2" ><ins>Login</ins></p>
+            <p class="register LogInClick2"><ins>Login</ins></p>
           </div>
-        </div>
+        </form>
       </header>
       <main class="container">
         <div class="dropMenu LogIn">
@@ -158,7 +188,7 @@
           <p class="Profile">Profile</p>
           <div class="line4"></div>
           <p class="dropMenu__text MyProfileClick">My profile</p>
-          <p class="dropMenu__text">Log Out</p>
+          <p class="dropMenu__text LogOutBtn">Log Out</p>
         </div>
         <div class="img1">
           <div class="overlay"></div>
@@ -275,9 +305,79 @@
                 viewBox="0 0 19 19"
                 fill="none"
               >
-                <path d="M2 16.8507L17 2.00001" stroke="#0C0C0E" stroke-width="3" />
+                <path
+                  d="M2 16.8507L17 2.00001"
+                  stroke="#0C0C0E"
+                  stroke-width="3"
+                />
                 <path d="M2 2.14928L17 17" stroke="#0C0C0E" stroke-width="3" />
               </svg>
+            </div>
+          </div>
+        </div>
+        <div class="modal__buy__a__card5">
+          <div class="krestik15 krestikkk">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="19"
+              height="19"
+              viewBox="0 0 19 19"
+              fill="none"
+            >
+              <path d="M2 16.8507L17 2" stroke="white" stroke-width="3" />
+              <path d="M2 2.14929L17 17" stroke="white" stroke-width="3" />
+            </svg>
+          </div>
+          <div class="modal__header5">
+            <h2 class="buy__a__card5">BUY A LIBRARY CARD</h2>
+          </div>
+          <div class="modal__main5">
+            <div class="modal__buy15">
+              <p class="modal__text__buy__a__card5">Bank card number</p>
+              <input type="number" />
+              <p class="modal__text__buy__a__card5">Expiration code</p>
+              <div class="Expiration__code5">
+                <div class="number__mini5">
+                  <input type="number" />
+                </div>
+                <div class="number__mini5">
+                  <input type="number" />
+                </div>
+              </div>
+              <p class="modal__text__buy__a__card5">CVC</p>
+              <div class="number__mini5">
+                <input type="number" />
+              </div>
+              <p class="modal__text__buy__a__card5">Cardholder name</p>
+              <input
+                type="text"
+                oninput="this.value = this.value.replace(/[^a-zа-яё\s]/gi,'')"
+                placeholder=""
+                class="input55"
+              />
+              <p class="modal__text__buy__a__card5">Postal code</p>
+              <input type="number" />
+              <p class="modal__text__buy__a__card5">City / Town</p>
+              <input
+                type="text"
+                oninput="this.value = this.value.replace(/[^a-zа-яё\s]/gi,'')"
+                placeholder=""
+                class="input55"
+              />
+              <div class="buy__a__card__menu5">
+                <button class="modal__text__buy__a__card__button5">
+                  <p class="modal__button__text5">Buy</p>
+                </button>
+                <p class="price5">$ 25.00</p>
+              </div>
+            </div>
+            <div class="modal__buy25">
+              <p class="modal__text15">
+                If you are live, work, attend school, or pay property taxes in
+                New York State, you can get a $25 digital library card right now
+                using this online form. Visitors to New York State can also use
+                this form to apply for a temporary card.
+              </p>
             </div>
           </div>
         </div>
@@ -800,6 +900,110 @@
               </p>
               <button class="get__a__card__button">Sign Up</button>
               <button class="get__a__card__button1">Log in</button>
+            </div>
+          </div>
+        </div>
+        <div class="LibraryCard__after5">
+          <div class="LibraryCard5">
+            <div class="section__title5">
+              <div class="LibraryCard__title5">Digital Library Cards</div>
+              <div class="about__line5"></div>
+            </div>
+            <div class="cards5">
+              <div class="find__card5">
+                <p class="find__card__text5">Your Library card</p>
+                <div class="card__body5">
+                  <div class="card__bg5">
+                    <div class="white__bg5">
+                      <div class="button__white15">
+                        <div class="cards__profile15">
+                          <div class="visits__info15">
+                            <p class="cards__text15">Visits</p>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="21"
+                              height="21"
+                              viewBox="0 0 21 21"
+                              fill="none"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M10.5 10C13.2614 10 15.5 7.76143 15.5 5C15.5 2.23857 13.2614 0 10.5 0C7.73857 0 5.5 2.23857 5.5 5C5.5 7.76143 7.73857 10 10.5 10ZM17.5711 13.9289C19.4464 15.8043 20.5 18.3478 20.5 21H10.5H0.5C0.5 18.3478 1.55357 15.8043 3.42894 13.9289C5.30429 12.0536 7.84784 11 10.5 11C13.1522 11 15.6957 12.0536 17.5711 13.9289Z"
+                                fill="#BB945F"
+                              />
+                            </svg>
+                            <span class="cards__number5">23</span>
+                          </div>
+                          <div class="bonuses__info15">
+                            <p class="cards__text15">Bonuses</p>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="21"
+                              viewBox="0 0 20 21"
+                              fill="none"
+                            >
+                              <path
+                                d="M10 0L12.2249 3.31001L15.8779 2.00532L15.8249 6.05634L19.5106 7.25532L17.2 10.5L19.5106 13.7447L15.8249 14.9437L15.8779 18.9947L12.2249 17.69L10 21L7.77508 17.69L4.12215 18.9947L4.17508 14.9437L0.489435 13.7447L2.8 10.5L0.489435 7.25532L4.17508 6.05634L4.12215 2.00532L7.77508 3.31001L10 0Z"
+                                fill="#BB945F"
+                              />
+                            </svg>
+                            <span class="cards__number5">1240</span>
+                          </div>
+                          <div class="book__info15">
+                            <p class="cards__text15">Books</p>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="21"
+                              viewBox="0 0 20 21"
+                              fill="none"
+                            >
+                              <rect width="20" height="21" fill="#BB945F" />
+                              <rect
+                                x="2"
+                                width="1"
+                                height="19"
+                                fill="#826844"
+                              />
+                              <rect x="1" width="1" height="21" fill="white" />
+                            </svg>
+                            <span class="cards__number5">2</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="gold__bg5">
+                      <p class="gold__bg__text5">Brooklyn Public Library</p>
+                      <p class="Readers__name5">
+                        <input
+                          type="text"
+                          oninput="this.value = this.value.replace(/[^a-zа-яё\s]/gi,'')"
+                          placeholder="John Doe"
+                          class="input55"
+                        />
+                      </p>
+                      <p class="number5">
+                        <input
+                          type="number"
+                          placeholder="F00234030"
+                          class="input55"
+                        />
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="get__a__card5">
+                <p class="get__a__card__head5">Visit your profile</p>
+                <p class="get__a__card__text5">
+                  With a digital library card you get free access to the
+                  Library’s wide array of digital resources including e-books,
+                  databases, educational resources, and more.
+                </p>
+                <button class="get__a__card__button35">Profile</button>
+              </div>
             </div>
           </div>
         </div>

@@ -348,6 +348,143 @@ body {
 
 /* Конец меню My Profile */
 
+/* modal__buy__a__card меню начало */
+.modal__buy__a__card5 {
+  margin: 0 auto;
+  margin-top: 2rem;
+  background: white;
+  width: 40.625rem;
+  height: 33.75rem;
+  position: fixed;
+  margin-inline: auto;
+  inset-inline: 0;
+  inset-block-start: calc(40%);
+  z-index: 9;
+  opacity: 1;
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+.modal__text__buy__a__card5 {
+  margin: 0;
+  margin-top: 0.62rem;
+  margin-bottom: 0.62rem;
+  margin-left: 1.56rem;
+  color: #000;
+  font-family: Inter-regular;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  letter-spacing: 0.01875rem;
+}
+.input5 {
+  width: 12.5rem;
+  height: 1.25rem;
+  margin-left: 1.56rem;
+  border: 1px solid #bb945f;
+}
+.input5::-webkit-outer-spin-button,
+.input5::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  background: #0a377e;
+  margin: 0;
+}
+.modal__text__buy__a__card__button5 {
+  margin-top: 1.25rem;
+  margin-left: 1.56rem;
+  margin-bottom: 0.62rem;
+  width: 4.6875rem;
+  height: 1.875rem;
+  border-radius: 0.125rem;
+  border: 1px solid #0c0c0e;
+  cursor: pointer;
+}
+.modal__button__text5 {
+  margin: 0;
+  color: #0c0c0e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Inter-regular;
+  font-size: 0.625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.0625rem;
+}
+.krestik15 {
+  position: absolute;
+  top: 1.56rem;
+  right: 1.56rem;
+  cursor: pointer;
+}
+.modal__header5 {
+  width: 40.625rem;
+  height: 3.75rem;
+  background: #0c0c0e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buy__a__card5 {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.modal__main5 {
+  display: flex;
+  justify-content: space-around;
+}
+.modal__buy15 {
+  margin-top: 1.87rem;
+}
+.Expiration__code5 {
+  display: flex;
+}
+.number__mini5 input {
+  width: 2.8125rem;
+  height: 1.25rem;
+}
+.Expiration__code5 {
+  display: flex;
+}
+.buy__a__card__menu5 {
+  display: flex;
+}
+.price5 {
+  margin: 0;
+  color: #0c0c0e;
+  font-family: Inter-Regular;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.25rem;
+  letter-spacing: 0.125rem;
+  margin-left: 1.56rem;
+  margin-top: 1.88rem;
+}
+.modal__buy25 {
+  margin-top: 1.87rem;
+  margin-right: 2.5rem;
+  width: 20.625rem;
+}
+.modal__text15 {
+  margin: 0;
+  color: #000;
+  font-family: Inter-regular;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  letter-spacing: 0.125rem;
+}
+
+/* modal__buy__a__card конец меню */
+
 .modal__Login {
   width: 15.625rem;
   height: 16.375rem;
@@ -401,6 +538,20 @@ body {
   font-weight: 400;
   line-height: 1.25rem;
   letter-spacing: 0.01875rem;
+}
+.errorMessage {
+  display: none;
+  position: absolute;
+  font-size: 0.8rem;
+  left: 2rem;
+  background-color: rgb(219, 219, 9);
+}
+.errorMessage1 {
+  display: none;
+  position: absolute;
+  font-size: 0.8rem;
+  left: 2rem;
+  background-color: rgb(219, 219, 9);
 }
 input {
   width: 12.5rem;
@@ -474,82 +625,6 @@ input::-webkit-inner-spin-button {
   inset-inline: 0;
   inset-block-start: calc(40%);
 }
-.modal__buy__a__card {
-  margin: 0 auto;
-  margin-top: 2rem;
-  width: 40.625rem;
-  height: 33.75rem;
-  position: relative;
-  border: 1px solid red;
-}
-.krestik1 {
-  position: absolute;
-  top: 1.56rem;
-  right: 1.56rem;
-}
-.modal__header {
-  width: 40.625rem;
-  height: 3.75rem;
-  background: #0c0c0e;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.buy__a__card {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-}
-.modal__main {
-  display: flex;
-  justify-content: space-around;
-}
-.modal__buy1 {
-  margin-top: 1.87rem;
-}
-.Expiration__code {
-  display: flex;
-}
-.number__mini input {
-  width: 2.8125rem;
-  height: 1.25rem;
-}
-.Expiration__code {
-  display: flex;
-}
-.buy__a__card__menu {
-  display: flex;
-}
-.price {
-  margin: 0;
-  color: #0c0c0e;
-  font-family: Inter-Regular;
-  font-size: 1.25rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.25rem;
-  letter-spacing: 0.125rem;
-  margin-left: 1.56rem;
-  margin-top: 1.88rem;
-}
-.modal__buy2 {
-  margin-top: 1.87rem;
-  margin-right: 2.5rem;
-  width: 20.625rem;
-}
-.modal__text1 {
-  margin: 0;
-  color: #000;
-  font-family: Inter-Regular;
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.25rem;
-  letter-spacing: 0.125rem;
-}
-
 /*Здесь начинаются инпут меню логин, регистр бай а лайбрари кард и т.д.  */
 .container {
   margin: 0 auto;
@@ -1227,6 +1302,8 @@ a {
   height: 38.375rem;
   background: #fff;
   position: relative;
+  display: none;
+  /*  */
 }
 .section__title {
   margin: 0 auto;
@@ -1448,6 +1525,329 @@ input[type="number"]::-webkit-outer-spin-button {
   background: #bb945f;
   cursor: pointer;
 }
+
+/* Digital Library Cards 2 start */
+
+.LibraryCard5 {
+  margin: 0 auto;
+  margin-top: 5rem;
+  max-width: 90rem;
+  height: 38.375rem;
+  background: #fff;
+  position: relative;
+  /* display: none; */
+}
+.section__title5 {
+  margin: 0 auto;
+  width: 25rem;
+  height: 3.8125rem;
+}
+.LibraryCard__title5 {
+  margin: 0;
+  margin-bottom: 1.25rem;
+  color: #0c0c0e;
+  text-align: center;
+  font-family: Forum-Regular;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+  letter-spacing: 0.125rem;
+  text-transform: capitalize;
+}
+.cards5 {
+  max-width: 90rem;
+  height: 38.375rem;
+  display: flex;
+  justify-content: space-between;
+}
+.find__card5 {
+  max-width: 37.5rem;
+  height: 28.3125rem;
+  margin-top: 2.5rem;
+}
+.find__card__text5 {
+  margin: 0;
+  color: #000;
+  text-align: center;
+  font-family: Inter-Regular;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.0375rem;
+}
+.card__body5 {
+  margin: 0;
+  margin-top: 1.87rem;
+  display: flex;
+  max-width: 37.5rem;
+  height: 24.1875rem;
+  padding-bottom: 0.0625rem;
+  justify-content: center;
+  align-items: center;
+}
+.card__bg5 {
+  width: 37.5rem;
+  height: 24.125rem;
+  position: relative;
+}
+.white__bg5 {
+  max-width: 37.5rem;
+  height: 24.125rem;
+  border: 3px solid #bb945f;
+  background: #fff;
+  position: relative;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.gold__bg5 {
+  width: 35rem;
+  height: 17rem;
+  background: #bb945f;
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+.gold__bg__text5 {
+  margin: 0;
+  padding: 1.25rem;
+  color: #000;
+  font-family: Forum-Regular;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.125rem;
+  letter-spacing: 0.0375rem;
+}
+.Readers__name5 {
+  margin: 0;
+  input {
+    text-indent: 1.25rem;
+    border: 1px solid white;
+  }
+}
+::placeholder {
+  color: #bb945f;
+}
+.number5 {
+  input {
+    text-indent: 1.25rem;
+    border: 1px solid white;
+  }
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.input55 {
+  width: 32.5rem;
+  height: 4.125rem;
+  border-radius: 0.625rem;
+  background: #fff;
+  margin-left: 1.25rem;
+  color: #8e8e8e;
+  font-family: Forum-Regular;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.125rem;
+  letter-spacing: 0.0375rem;
+}
+.button__white5 {
+  padding: 0.625rem 2.5rem;
+  border-radius: 0.125rem;
+  border: 1px solid #0c0c0e;
+  color: #0c0c0e;
+  background-color: white;
+  text-align: center;
+  font-family: Inter-Regular;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.0625rem;
+  position: absolute;
+  bottom: 1.88rem;
+  right: 11rem;
+}
+.button__white5:hover {
+  border-radius: 0.125rem;
+  border: 1px solid #bb945f;
+  background: #bb945f;
+  cursor: pointer;
+}
+.about__line5 {
+  width: 3.125rem;
+  height: 0.0625rem;
+  background: #0c0c0e;
+  margin: 0 auto;
+  margin-bottom: 2.5rem;
+}
+.get__a__card5 {
+  margin-top: 2.5rem;
+  margin-right: 1.25rem;
+  max-width: 28.5rem;
+  height: 15.8125rem;
+  position: relative;
+  justify-content: end;
+}
+.get__a__card__head5 {
+  margin: 0;
+  margin-bottom: 2.19rem;
+  color: #000;
+  text-align: end;
+  font-family: Forum-Regular;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.0375rem;
+}
+.get__a__card__text5 {
+  margin: 0;
+  color: #000;
+  text-align: right;
+  font-family: Inter-Regular;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+  letter-spacing: 0.025rem;
+}
+.get__a__card__button5 {
+  width: 4.6875rem;
+  height: 1.875rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.125rem;
+  border: 1px solid #0c0c0e;
+  color: #0c0c0e;
+  background-color: white;
+  text-align: center;
+  font-family: Inter-Regular;
+  font-size: 0.625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.0625rem;
+  position: absolute;
+  bottom: 0;
+  right: 6.75rem;
+}
+.get__a__card__button15 {
+  width: 4.6875rem;
+  height: 1.875rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.125rem;
+  border: 1px solid #0c0c0e;
+  color: #0c0c0e;
+  background-color: white;
+  text-align: center;
+  font-family: Inter-Regular;
+  font-size: 0.625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.0625rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.get__a__card__button5:hover {
+  border-radius: 0.125rem;
+  border: 1px solid #bb945f;
+  background: #bb945f;
+  cursor: pointer;
+}
+.get__a__card__button15:hover {
+  border-radius: 0.125rem;
+  border: 1px solid #bb945f;
+  background: #bb945f;
+  cursor: pointer;
+}
+.cards__profile15 {
+  margin-bottom: 1rem;
+  margin-left: 1.25rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.19rem;
+}
+.button__white15 {
+  margin: 0;
+  border-radius: 0.125rem;
+  color: #0c0c0e;
+  background-color: white;
+  text-align: center;
+  font-family: Inter-Regular;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.0625rem;
+  position: absolute;
+  bottom: 0rem;
+  right: 11rem;
+}
+.cards__text15 {
+  margin: 0;
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  letter-spacing: 0.025rem;
+}
+.visits__info15 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.bonuses__info15 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.book__info15 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.get__a__card__button35 {
+  width: 4.6875rem;
+  height: 1.875rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.125rem;
+  border: 1px solid #0c0c0e;
+  color: #0c0c0e;
+  background-color: white;
+  text-align: center;
+  font-family: Inter-Regular;
+  font-size: 0.625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.0625rem;
+  position: absolute;
+  bottom: -2rem;
+  right: 0;
+}
+
+/* Digital Library Cards2 end */
+
 .footer__head {
   margin: 0 auto;
   max-width: 90rem;

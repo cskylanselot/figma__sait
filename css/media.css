@@ -276,10 +276,18 @@ body {
     display: flex;
     flex-direction: column;
   }
+  .cards5 {
+    display: flex;
+    flex-direction: column;
+  }
   .find__card {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-self: center;
+  }
+  .find__card5 {
+    display: flex;
+    flex-direction: column;
     align-self: center;
   }
   .get__a__card {
@@ -291,16 +299,35 @@ body {
     align-self: center;
     position: relative;
   }
+  .get__a__card5 {
+    max-width: 37.5rem;
+    height: 13.9375rem;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    position: relative;
+  }
   .get__a__card__head {
     text-align: center;
   }
+  .get__a__card__head5 {
+    text-align: center;
+  }
   .get__a__card__text {
+    text-align: center;
+  }
+  .get__a__card__text5 {
     text-align: center;
   }
   .get__a__card__button {
     position: absolute;
     bottom: -5rem;
     left: 12.5rem;
+  }
+  .get__a__card__button35 {
+    position: absolute;
+    bottom: -3rem;
+    left: 17rem;
   }
   .get__a__card__button1 {
     position: absolute;

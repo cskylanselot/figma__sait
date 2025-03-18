@@ -1,11 +1,19 @@
-export default removeClasslist;
+export default generateRandomString;
 
 // Для нормальной роботы якоря
 
-document.querySelector(".anchor").addEventListener("submit", function (event) {
-  event.preventDefault();
-  window.location.href = window.location.pathname;
-});
+document
+  .querySelector(".modal__Login")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    window.location.href = window.location.pathname;
+  });
+document
+  .querySelector(".modal__Register")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    window.location.href = window.location.pathname;
+  });
 
 //
 
@@ -122,6 +130,42 @@ closeBtn.addEventListener("click", function () {
 });
 
 // Конец My profile menu
+
+// Coppy Card number My profile menu
+
+const cardnamber2 = document.querySelector(".card__number2");
+const coppyBtn = document.querySelector(".coppyBtn");
+
+coppyBtn.addEventListener("click", function () {
+  navigator.clipboard.writeText(cardnamber2.textContent);
+});
+
+// End Coppy Card number My profile menu
+
+// Генератор случайных числе coppyBtn
+
+const cardnamber3 = document.querySelector(".card__number2");
+
+function generateRandomString(sumString) {
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const numbers = "1234567890";
+  let randomString = "";
+
+  const firstCharIndex = Math.floor(Math.random() * letters.length);
+  randomString += letters[firstCharIndex];
+
+  for (let i = 1; i < sumString; i++) {
+    const numberIndex = Math.floor(Math.random() * numbers.length);
+    randomString += numbers[numberIndex];
+  }
+  return randomString;
+}
+window.addEventListener("load", () => {
+  const randomString = generateRandomString(8);
+  cardnamber3.textContent = randomString;
+});
+
+// Конец генератора случайных чисел
 
 // Log menu и Register menu
 
@@ -455,16 +499,16 @@ buyBooks.forEach(function (buy) {
 
 // Digital Library Cards замена
 
-const LibraryCard5 = document.querySelector(".LibraryCard5");
-const LibraryCard = document.querySelector(".LibraryCard");
+const cards5 = document.querySelector(".cards5");
+const cards = document.querySelector(".cards");
 
 window.addEventListener("load", () => {
   if (localStorage.getItem("keyEnter") == 1) {
-    LibraryCard5.style.display = "block";
-    LibraryCard.style.display = "none";
+    cards5.style.display = "flex";
+    cards.style.display = "none";
   } else {
-    LibraryCard5.style.display = "none";
-    LibraryCard.style.display = "block";
+    cards5.style.display = "none";
+    cards.style.display = "flex";
   }
 });
 // Digital Library Cards конец

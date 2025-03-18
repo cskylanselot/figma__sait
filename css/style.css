@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   padding: 0;
@@ -255,6 +258,10 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 1.25rem;
+}
+.coppyBtn {
+  cursor: pointer;
+  margin-bottom: 0.1rem;
 }
 .cards__profile {
   margin-left: 1.25rem;
@@ -1302,8 +1309,6 @@ a {
   height: 38.375rem;
   background: #fff;
   position: relative;
-  display: none;
-  /*  */
 }
 .section__title {
   margin: 0 auto;
@@ -1535,7 +1540,6 @@ input[type="number"]::-webkit-outer-spin-button {
   height: 38.375rem;
   background: #fff;
   position: relative;
-  /* display: none; */
 }
 .section__title5 {
   margin: 0 auto;
@@ -1560,6 +1564,7 @@ input[type="number"]::-webkit-outer-spin-button {
   height: 38.375rem;
   display: flex;
   justify-content: space-between;
+  display: none;
 }
 .find__card5 {
   max-width: 37.5rem;
@@ -1642,7 +1647,7 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.input55 {
+.input5 {
   width: 32.5rem;
   height: 4.125rem;
   border-radius: 0.625rem;
@@ -1656,6 +1661,7 @@ input[type="number"]::-webkit-outer-spin-button {
   line-height: 3.125rem;
   letter-spacing: 0.0375rem;
 }
+
 .button__white5 {
   padding: 0.625rem 2.5rem;
   border-radius: 0.125rem;

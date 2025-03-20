@@ -261,7 +261,7 @@ body {
 }
 .coppyBtn {
   cursor: pointer;
-  margin-bottom: 0.1rem;
+  margin-bottom: 0.2rem;
 }
 .cards__profile {
   margin-left: 1.25rem;
@@ -365,7 +365,7 @@ body {
   position: fixed;
   margin-inline: auto;
   inset-inline: 0;
-  inset-block-start: calc(40%);
+  inset-block-start: calc(20%);
   z-index: 9;
   opacity: 1;
   visibility: hidden;
@@ -987,6 +987,23 @@ input::-webkit-inner-spin-button {
   border-radius: 5px;
   color: #bb945f;
   cursor: pointer;
+}
+.disabled {
+  border-radius: 0.125rem;
+  border: 2px solid #bb945f;
+  border-radius: 5px;
+  color: #bb945f;
+  text-align: center;
+  font-family: Inter-Bold;
+  font-size: 0.625rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.0625rem;
+  padding: 0.56rem 1.69rem 0.56rem 1.69rem;
+  margin: 0 0 0.94rem 1.25rem;
+  position: absolute;
+  bottom: 0;
+  border-radius: 5px;
 }
 .book1 {
   position: absolute;

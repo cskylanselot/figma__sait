@@ -20,24 +20,41 @@ SingUp.addEventListener("click", function () {
   localStorage.setItem("EMail", EMail.value);
   localStorage.setItem("Password", PasswordReg.value);
   localStorage.setItem("generateRandomStringLocal", generateRandomStringLocal);
+  localStorage.setItem("VisitsClient", 0);
 });
 
-//
+// Присваивание крандомного номера клиента
+
 const cardnamber4 = document.querySelector(".card__number2");
+const inputNumbers = document.querySelector(".inputNumbers");
 
 window.addEventListener("load", () => {
   if (localStorage.getItem("keyEnter") == 0);
   else {
     cardnamber4.textContent = localStorage.getItem("generateRandomStringLocal");
+    inputNumbers.placeholder = localStorage.getItem(
+      "generateRandomStringLocal"
+    );
+    VisitsClient.textContent = Number(localStorage.getItem("VisitsClient"));
+    cards__number5.textContent = Number(localStorage.getItem("VisitsClient"));
   }
 });
-//
+
+//Конец присваивания
+
+const VisitsClient = document.querySelector(".VisitsClient");
+const cards__number5 = document.querySelector(".cards__number5");
+
 LogInMenuClick.addEventListener("click", function () {
   if (
-    (EMailOrReadersCard.value == localStorage.getItem("EMail"),
-    passwordLogIn.value == localStorage.getItem("Password"))
+    EMailOrReadersCard.value == localStorage.getItem("EMail") &&
+    passwordLogIn.value == localStorage.getItem("Password")
   ) {
     localStorage.setItem("keyEnter", 1);
+    localStorage.setItem(
+      "VisitsClient",
+      Number(localStorage.getItem("VisitsClient")) + 1
+    );
   }
 });
 

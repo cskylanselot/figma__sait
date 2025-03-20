@@ -290,6 +290,7 @@ krestikk.addEventListener("click", function () {
 });
 
 krestikkk.addEventListener("click", function () {
+  removeClasslist();
   modalBuyACard.style.visibility = "hidden";
   modalBuyACard.style.opacity = "0";
   containerGray.style.visibility = "hidden";
@@ -330,26 +331,18 @@ input.forEach(function (inputName) {
 
 // Поле password
 
-const passwordJS = document.querySelectorAll(".passwordJS");
 const PasswordReg = document.getElementById("PasswordReg");
 const passwordLogIn = document.getElementById("passwordLogIn");
 const errorMessage = document.querySelector(".errorMessage");
 const errorMessage1 = document.querySelector(".errorMessage1");
 
-passwordJS.forEach(function (passwordName) {
-  passwordName.addEventListener("input", function () {
-    this.value = this.value.replace(/\s/g, "");
-  });
-});
-modalRegister.addEventListener("submit", function (event) {
+modalRegister.addEventListener("submit", function () {
   if (PasswordReg.value.length < 8) {
-    event.preventDefault();
     errorMessage.style.display = "block";
   }
 });
-modalLogin.addEventListener("submit", function (event) {
+modalLogin.addEventListener("submit", function () {
   if (passwordLogIn.value.length < 8) {
-    event.preventDefault();
     errorMessage1.style.display = "block";
   }
 });
@@ -461,36 +454,108 @@ autumnOpen.addEventListener("click", function () {
 });
 //конец функции для перелистывания времен года
 
-// Buy a librart card меню при нажатии на buy
+// Buy books menu
+
+let activeButton = null;
+
 const modalBuyACard = document.querySelector(".modal__buy__a__card5");
+
+// Сохранение состояния кнопки
+function saveButtonState(button) {
+  const buttonId = button.getAttribute("data-id");
+  const state = {
+    isDisabled: button.classList.contains("disabled"),
+    text: button.textContent,
+  };
+  localStorage.setItem(buttonId, JSON.stringify(state));
+}
+
+function restoreButtonState(button) {
+  const buttonId = button.getAttribute("data-id");
+  const savedState = localStorage.getItem(buttonId);
+
+  if (savedState) {
+    const state = JSON.parse(savedState);
+
+    if (state.isDisabled) {
+      button.classList.add("disabled");
+      button.disabled = true;
+    } else {
+      button.classList.remove("disabled");
+      button.disabled = false;
+    }
+
+    if (state.text) {
+      button.textContent = state.text;
+    }
+  }
+}
+document.addEventListener("DOMContentLoaded", function () {
+  if (localStorage.getItem("keyEnter") == 1) {
+    buyBooks.forEach(function (buy) {
+      restoreButtonState(buy);
+      if (buy.classList.contains("disabled")) {
+        buy.classList.remove("favorites__button");
+      }
+    });
+  }
+});
+
+// Обработчик отправки формы
+// (localStorage.getItem("keyEnter") == 0) {
+//   activeButton.textContent = "Buy";
+//   activeButton.classList.remove("disabled");
+//   activeButton.classList.add("favorites__button");
+//   activeButton.disabled = false;
+
+modalBuyACard.addEventListener("submit", function (event) {
+  event.preventDefault();
+  if (activeButton) {
+    activeButton.textContent = "Oun";
+    activeButton.classList.remove("favorites__button");
+    activeButton.classList.add("disabled");
+    activeButton.disabled = true;
+  }
+  saveButtonState(activeButton);
+  removeClasslist();
+  containerGray.style.visibility = "hidden";
+  containerGray.style.opacity = "0";
+});
+
+// Конец Обработчик отправки формы
+
+// Buy a librart card меню при нажатии на buy
 
 buyBooks.forEach(function (buy) {
   buy.addEventListener("click", function () {
+    activeButton = this;
     containerGray.style.visibility = "visible";
     containerGray.style.opacity = "0.8";
+
     if (localStorage.getItem("keyEnter") == 1) {
       buy.classList.toggle("buyActive");
+      saveButtonState(buy);
+
       if (buy.classList.contains("buyActive")) {
-        removeClasslist();
         modalBuyACard.style.visibility = "visible";
         modalBuyACard.style.opacity = "1";
       } else {
         containerGray.style.visibility = "visible";
         containerGray.style.opacity = "0.8";
         buy.classList.toggle("buyActive");
-        if (buy.classList.contains("buyActive")) {
-          removeClasslist();
-          modalLogin.style.visibility = "visible";
-          modalLogin.style.opacity = "1";
-        }
+        saveButtonState(buy);
       }
     } else {
       buy.classList.toggle("buyActive");
       if (buy.classList.contains("buyActive")) {
-        removeClasslist();
         modalLogin.style.visibility = "visible";
         modalLogin.style.opacity = "1";
       }
+      buy.textContent = "Buy";
+      buy.classList.remove("disabled");
+      buy.classList.add("favorites__button");
+      buy.disabled = false;
+      saveButtonState(buy);
     }
   });
 });

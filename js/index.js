@@ -96,26 +96,29 @@ imgLog.addEventListener("click", function () {
 
 // My profile menu
 
-const MyProfileClick = document.querySelector(".MyProfileClick");
+const MyProfileClick = document.querySelectorAll(".MyProfileClick");
 const MyProfile = document.querySelector(".modal__profile");
 const myProfileOpen = document.querySelector(".LogOut");
 const closeBtn = document.querySelector(".close__btn");
 
-MyProfileClick.addEventListener("click", function () {
-  MyProfileClick.classList.toggle("MyProfileClickActive");
-  containerGray.style.visibility = "visible";
-  containerGray.style.opacity = "0.8";
-  if (MyProfileClick.classList.contains("MyProfileClickActive")) {
-    MyProfile.style.visibility = "visible";
-    MyProfile.style.opacity = "1";
-  } else {
-    MyProfile.style.opacity = "0";
-    MyProfile.style.visibility = "hidden";
-  }
-  if (MyProfileClick.classList.contains("MyProfileClickActive")) {
-    myProfileOpen.style.top = "-9rem";
-  }
+MyProfileClick.forEach(function (buyy) {
+  buyy.addEventListener("click", function () {
+    buyy.classList.toggle("MyProfileClickActive");
+    containerGray.style.visibility = "visible";
+    containerGray.style.opacity = "0.8";
+    if (buyy.classList.contains("MyProfileClickActive")) {
+      MyProfile.style.visibility = "visible";
+      MyProfile.style.opacity = "1";
+    } else {
+      MyProfile.style.opacity = "0";
+      MyProfile.style.visibility = "hidden";
+    }
+    if (buyy.classList.contains("MyProfileClickActive")) {
+      myProfileOpen.style.top = "-9rem";
+    }
+  });
 });
+
 closeBtn.addEventListener("click", function () {
   containerGray.style.visibility = "hidden";
   containerGray.style.opacity = "0";
@@ -124,8 +127,6 @@ closeBtn.addEventListener("click", function () {
 
   if (closeBtn.classList.contains("closeBtnActive")) {
     removeClasslist();
-    MyProfile.style.visibility = "hidden";
-    MyProfile.style.opacity = "0";
   }
 });
 
@@ -169,10 +170,10 @@ window.addEventListener("load", () => {
 
 // Log menu и Register menu
 
-const LogInClick = document.querySelector(".LogInClick");
+const LogInClick = document.querySelectorAll(".LogInClick");
 const LogInClick2 = document.querySelector(".LogInClick2");
 const modalLogin = document.querySelector(".modal__Login");
-const RegisterClick = document.querySelector(".RegisterClick");
+const RegisterClick = document.querySelectorAll(".RegisterClick");
 const RegisterClick2 = document.querySelector(".RegisterClick2");
 const modalRegister = document.querySelector(".modal__Register");
 const krestik = document.querySelector(".krestik");
@@ -186,34 +187,50 @@ function removeClasslist() {
   krestikk.classList.remove("krestikActive");
   imgLog.classList.remove("LogInActive");
   krestik.classList.remove("krestikActive");
-  LogInClick.classList.remove("LogInClickActive");
-  RegisterClick.classList.remove("RegisterClickActive");
+  LogInClick.forEach(function (LogIn) {
+    LogIn.classList.remove("LogInClickActive");
+  });
+  RegisterClick.forEach(function (Register) {
+    Register.classList.remove("RegisterClickActive");
+  });
   containerGrayEnd.classList.remove("containerGrayEndActive");
-  MyProfileClick.classList.remove("MyProfileClickActive");
   closeBtn.classList.remove("closeBtnActive");
-  MyProfileClick.classList.remove("MyProfileClickActive");
+  MyProfileClick.forEach(function (buyy) {
+    buyy.classList.remove("MyProfileClickActive");
+  });
   buyBooks.forEach(function (buy) {
     buy.classList.remove("buyActive");
   });
   modalBuyACard.style.visibility = "hidden";
   modalBuyACard.style.opacity = "0";
+  MyProfile.style.visibility = "hidden";
+  MyProfile.style.opacity = "0";
+  modalRegister.style.visibility = "hidden";
+  modalRegister.style.opacity = "0";
+  modalLogin.style.visibility = "hidden";
+  modalLogin.style.opacity = "0";
+  containerGray.style.visibility = "hidden";
+  containerGray.style.opacity = "0";
 }
 
-LogInClick.addEventListener("click", function () {
-  LogInClick.classList.toggle("LogInClickActive");
-  containerGray.style.visibility = "visible";
-  containerGray.style.opacity = "0.8";
-  if (LogInClick.classList.contains("LogInClickActive")) {
-    modalLogin.style.visibility = "visible";
-    modalLogin.style.opacity = "1";
-  } else {
-    modalLogin.style.opacity = "0";
-    modalLogin.style.visibility = "hidden";
-  }
-  if (LogInClick.classList.contains("LogInClickActive")) {
-    LogInOpen.style.top = "-9rem";
-  }
+LogInClick.forEach(function (LogIn) {
+  LogIn.addEventListener("click", function () {
+    LogIn.classList.toggle("LogInClickActive");
+    containerGray.style.visibility = "visible";
+    containerGray.style.opacity = "0.8";
+    if (LogIn.classList.contains("LogInClickActive")) {
+      modalLogin.style.visibility = "visible";
+      modalLogin.style.opacity = "1";
+    } else {
+      modalLogin.style.opacity = "0";
+      modalLogin.style.visibility = "hidden";
+    }
+    if (LogIn.classList.contains("LogInClickActive")) {
+      LogInOpen.style.top = "-9rem";
+    }
+  });
 });
+
 LogInClick2.addEventListener("click", function () {
   LogInClick2.classList.toggle("LogInClickActive");
   containerGray.style.visibility = "visible";
@@ -230,20 +247,22 @@ LogInClick2.addEventListener("click", function () {
   }
   RegisterClick2.classList.remove("RegisterClickActive");
 });
-RegisterClick.addEventListener("click", function () {
-  RegisterClick.classList.toggle("RegisterClickActive");
-  containerGray.style.visibility = "visible";
-  containerGray.style.opacity = "0.8";
-  if (RegisterClick.classList.contains("RegisterClickActive")) {
-    modalRegister.style.visibility = "visible";
-    modalRegister.style.opacity = "1";
-  } else {
-    modalRegister.style.visibility = "hidden";
-    modalRegister.style.opacity = "0";
-  }
-  if (RegisterClick.classList.contains("RegisterClickActive")) {
-    LogInOpen.style.top = "-9rem";
-  }
+RegisterClick.forEach(function (Register) {
+  Register.addEventListener("click", function () {
+    Register.classList.toggle("RegisterClickActive");
+    containerGray.style.visibility = "visible";
+    containerGray.style.opacity = "0.8";
+    if (Register.classList.contains("RegisterClickActive")) {
+      modalRegister.style.visibility = "visible";
+      modalRegister.style.opacity = "1";
+    } else {
+      modalRegister.style.visibility = "hidden";
+      modalRegister.style.opacity = "0";
+    }
+    if (Register.classList.contains("RegisterClickActive")) {
+      LogInOpen.style.top = "-9rem";
+    }
+  });
 });
 RegisterClick2.addEventListener("click", function () {
   RegisterClick2.classList.toggle("RegisterClickActive");
@@ -272,8 +291,6 @@ krestik.addEventListener("click", function () {
   krestik.classList.toggle("krestikActive");
   if (krestik.classList.contains("krestikActive")) {
     removeClasslist();
-    modalLogin.style.visibility = "hidden";
-    modalLogin.style.opacity = "0";
   }
 });
 krestikk.addEventListener("click", function () {
@@ -284,17 +301,11 @@ krestikk.addEventListener("click", function () {
 
   if (krestikk.classList.contains("krestikActive")) {
     removeClasslist();
-    modalRegister.style.visibility = "hidden";
-    modalRegister.style.opacity = "0";
   }
 });
 
 krestikkk.addEventListener("click", function () {
   removeClasslist();
-  modalBuyACard.style.visibility = "hidden";
-  modalBuyACard.style.opacity = "0";
-  containerGray.style.visibility = "hidden";
-  containerGray.style.opacity = "0";
 });
 
 containerGrayEnd.addEventListener("click", function () {
@@ -305,10 +316,6 @@ containerGrayEnd.addEventListener("click", function () {
 
   if (containerGrayEnd.classList.contains("containerGrayEndActive")) {
     removeClasslist();
-    modalRegister.style.visibility = "hidden";
-    modalRegister.style.opacity = "0";
-    modalLogin.style.visibility = "hidden";
-    modalLogin.style.opacity = "0";
   }
 });
 // Конец Log menu и Register menu
@@ -337,17 +344,31 @@ const errorMessage = document.querySelector(".errorMessage");
 const errorMessage1 = document.querySelector(".errorMessage1");
 
 modalRegister.addEventListener("submit", function () {
+  localStorage.setItem("keyBooks", 0);
   if (PasswordReg.value.length < 8) {
     errorMessage.style.display = "block";
   }
 });
-modalLogin.addEventListener("submit", function () {
-  if (passwordLogIn.value.length < 8) {
+
+// Конец поля password
+
+// Проверка существования пользователя через localStorage
+const EMailOrReadersCardLS = document.getElementById("EMailOrReadersCard");
+const passwordLogInLS = document.getElementById("passwordLogIn");
+const LogInMenuClickk = document.querySelector(".LogInMenuClick");
+
+LogInMenuClickk.addEventListener("click", function (event) {
+  if (
+    EMailOrReadersCardLS.value == localStorage.getItem("EMail") &&
+    passwordLogInLS.value == localStorage.getItem("Password")
+  ) {
+  } else {
     errorMessage1.style.display = "block";
+    event.preventDefault();
   }
 });
 
-// Конец поля password
+// Конец Проверки существования пользователя через localStorage
 
 // Поле только е-маил
 
@@ -491,7 +512,17 @@ function restoreButtonState(button) {
   }
 }
 document.addEventListener("DOMContentLoaded", function () {
+  buyedBooks.forEach(function (buyed) {
+    buyed.textContent = Number(localStorage.getItem("keyBooks"));
+  });
   if (localStorage.getItem("keyEnter") == 1) {
+    const rememberDivArray =
+      JSON.parse(localStorage.getItem("BooksRemember")) || [];
+    rememberDivArray.forEach(function (buyDivArray) {
+      const Li = document.createElement("li");
+      Li.textContent = buyDivArray;
+      RentedList.appendChild(Li);
+    });
     buyBooks.forEach(function (buy) {
       restoreButtonState(buy);
       if (buy.classList.contains("disabled")) {
@@ -500,17 +531,32 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+// Конец Обработчик отправки формы
 
-// Обработчик отправки формы
-// (localStorage.getItem("keyEnter") == 0) {
-//   activeButton.textContent = "Buy";
-//   activeButton.classList.remove("disabled");
-//   activeButton.classList.add("favorites__button");
-//   activeButton.disabled = false;
+// Submit Buy a library card
+const buyedBooks = document.querySelectorAll(".buyedBooks");
+const RentedList = document.querySelector(".Rented__list");
 
 modalBuyACard.addEventListener("submit", function (event) {
   event.preventDefault();
   if (activeButton) {
+    const remember = activeButton.closest("div");
+    const rememberDiv = remember.querySelector(".favorites__head").textContent;
+    const rememberDivArray =
+      JSON.parse(localStorage.getItem("BooksRemember")) || [];
+    rememberDivArray.push(rememberDiv);
+    localStorage.setItem("BooksRemember", JSON.stringify(rememberDivArray));
+    const Li = document.createElement("li");
+    Li.textContent = rememberDiv;
+    RentedList.appendChild(Li);
+
+    localStorage.setItem(
+      "keyBooks",
+      Number(localStorage.getItem("keyBooks")) + 1
+    );
+    buyedBooks.forEach(function (buyed) {
+      buyed.textContent = Number(localStorage.getItem("keyBooks"));
+    });
     activeButton.textContent = "Oun";
     activeButton.classList.remove("favorites__button");
     activeButton.classList.add("disabled");
@@ -518,11 +564,8 @@ modalBuyACard.addEventListener("submit", function (event) {
   }
   saveButtonState(activeButton);
   removeClasslist();
-  containerGray.style.visibility = "hidden";
-  containerGray.style.opacity = "0";
 });
-
-// Конец Обработчик отправки формы
+// Конец Submit Buy a library card
 
 // Buy a librart card меню при нажатии на buy
 
